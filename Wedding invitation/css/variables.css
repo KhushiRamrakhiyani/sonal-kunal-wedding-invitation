@@ -1,0 +1,59 @@
+:root {
+  /* Luxury Wedding Color Palette */
+  --color-gold-light: #FBF0D4;
+  --color-gold-champagne: #E4BF74;
+  --color-gold-primary: #C59B4B;
+  --color-gold-antique: #A77B2C;
+  --color-gold-dark: #6E4D13;
+
+  --color-ivory-warm: #FDFBF7;
+  --color-pearl-white: #FAF8F5;
+  --color-cream: #F5EFEB;
+  --color-paper: #FFFDF9;
+
+  --color-blush-soft: #F9ECE8;
+  --color-blush-rose: #EFAFA3;
+  --color-dusty-rose: #C67873;
+  --color-crimson-royal: #801C2B;
+  --color-maroon-deep: #550D18;
+
+  --color-sage-soft: #E2ECE3;
+  --color-sage-botanical: #769678;
+  --color-green-forest: #2D5A27;
+
+  --color-night-sapphire: #0E1520;
+  --color-night-sangeet: #140C24;
+  --color-charcoal-deep: #2A2421;
+  --color-text-primary: #3B2E2A;
+  --color-text-secondary: #6B5B54;
+  --color-text-muted: #96867F;
+  --color-text-gold: #C59B4B;
+
+  /* Typography */
+  --font-serif-luxury: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-serif-body: 'Cormorant Garamond', Garamond, 'Times New Roman', serif;
+  --font-sans-clean: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-gurmukhi: 'Noto Sans Gurmukhi', 'Gurmukhi MN', sans-serif;
+
+  /* Gradients */
+  --gradient-gold: linear-gradient(135deg, #FFF1CA 0%, #E4BF74 30%, #C59B4B 60%, #875F15 100%);
+  --gradient-gold-subtle: linear-gradient(135deg, rgba(228, 191, 116, 0.15) 0%, rgba(197, 155, 75, 0.05) 100%);
+  --gradient-card-border: linear-gradient(135deg, rgba(228, 191, 116, 0.6) 0%, rgba(197, 155, 75, 0.2) 50%, rgba(228, 191, 116, 0.6) 100%);
+  --gradient-crimson: linear-gradient(135deg, #A82435 0%, #6E121E 100%);
+
+  /* Shadows */
+  --shadow-luxury-card: 0 16px 40px -10px rgba(78, 54, 30, 0.12), 0 0 0 1px rgba(197, 155, 75, 0.25);
+  --shadow-gold-glow: 0 0 25px rgba(228, 191, 116, 0.45);
+  --shadow-floating-btn: 0 8px 24px rgba(78, 54, 30, 0.18);
+
+  /* Layout dimensions */
+  --max-card-width: 480px;
+  --max-site-width: 1100px;
+  --header-height: 64px;
+  --border-radius-card: 28px;
+  --border-radius-btn: 50px;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-page: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}

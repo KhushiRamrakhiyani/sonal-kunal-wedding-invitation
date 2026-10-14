@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 550" width="100%" height="100%">
+  <defs>
+    <!-- Royal Mandap Twilight / Golden Hour Glow -->
+    <radialGradient id="mandapAura" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF8E7" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#FCEFD2" stop-opacity="0.6"/>
+      <stop offset="75%" stop-color="#FCE4EC" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F9F6F0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Luxury Gold Gradients -->
+    <linearGradient id="mandapGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2CA"/>
+      <stop offset="35%" stop-color="#DFB45C"/>
+      <stop offset="70%" stop-color="#B88A2C"/>
+      <stop offset="100%" stop-color="#7D5711"/>
+    </linearGradient>
+
+    <!-- Royal Silk Drapes in Blush & Ivory -->
+    <linearGradient id="silkBlush" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#FDE8EA"/>
+      <stop offset="100%" stop-color="#F3C5CB"/>
+    </linearGradient>
+
+    <!-- Crimson Bridal Red -->
+    <linearGradient id="royalCrimson" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B7152B"/>
+      <stop offset="50%" stop-color="#840B1D"/>
+      <stop offset="100%" stop-color="#550510"/>
+    </linearGradient>
+
+    <!-- Floral Garland Gradients -->
+    <linearGradient id="roseGarland" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7675"/>
+      <stop offset="50%" stop-color="#D63031"/>
+      <stop offset="100%" stop-color="#840B1D"/>
+    </linearGradient>
+
+    <linearGradient id="marigoldGarland" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFEAA7"/>
+      <stop offset="50%" stop-color="#FDCB6E"/>
+      <stop offset="100%" stop-color="#E17055"/>
+    </linearGradient>
+
+    <filter id="divineShimmer">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Light Halo -->
+  <circle cx="275" cy="275" r="255" fill="url(#mandapAura)"/>
+
+  <!-- Majestic Royal Mandap Pillars (Left & Right Carved Columns) -->
+  <g id="mandapStructure">
+    <!-- Left Carved Pillar -->
+    <g transform="translate(70, 160)">
+      <!-- Pillar Capital -->
+      <polygon points="-15,0 35,0 25,20 -5,20" fill="url(#mandapGold)"/>
+      <!-- Pillar Column -->
+      <rect x="0" y="20" width="20" height="260" fill="url(#mandapGold)" opacity="0.9"/>
+      <rect x="4" y="20" width="4" height="260" fill="#FFF2CA" opacity="0.5"/>
+      <!-- Floral carvings on pillar -->
+      <circle cx="10" cy="80" r="4" fill="#FFF2CA"/>
+      <circle cx="10" cy="140" r="4" fill="#FFF2CA"/>
+      <circle cx="10" cy="200" r="4" fill="#FFF2CA"/>
+      <!-- Pillar Base -->
+      <polygon points="-10,280 30,280 35,300 -15,300" fill="url(#mandapGold)"/>
+    </g>
+
+    <!-- Right Carved Pillar -->
+    <g transform="translate(460, 160)">
+      <polygon points="-15,0 35,0 25,20 -5,20" fill="url(#mandapGold)"/>
+      <rect x="0" y="20" width="20" height="260" fill="url(#mandapGold)" opacity="0.9"/>
+      <rect x="4" y="20" width="4" height="260" fill="#FFF2CA" opacity="0.5"/>
+      <circle cx="10" cy="80" r="4" fill="#FFF2CA"/>
+      <circle cx="10" cy="140" r="4" fill="#FFF2CA"/>
+      <circle cx="10" cy="200" r="4" fill="#FFF2CA"/>
+      <polygon points="-10,280 30,280 35,300 -15,300" fill="url(#mandapGold)"/>
+    </g>
+
+    <!-- Mandap Ornate Arch Roof & Cupola (Chattri) -->
+    <g transform="translate(275, 120)">
+      <!-- Grand Arch Profile -->
+      <path d="M-195,40 C-195,-30 -80,-60 0,-70 C80,-60 195,-30 195,40" 
+            fill="none" stroke="url(#mandapGold)" stroke-width="4"/>
+      <path d="M-180,45 C-180,-15 -75,-45 0,-55 C75,-45 180,-15 180,45" 
+            fill="none" stroke="url(#mandapGold)" stroke-width="1.8" stroke-dasharray="6,4"/>
+      <!-- Top Kalash on Mandap -->
+      <path d="M-12,-70 C-12,-85 0,-95 0,-95 C0,-95 12,-85 12,-70 Z" fill="url(#mandapGold)"/>
+      <circle cx="0" cy="-97" r="3.5" fill="url(#mandapGold)"/>
+    </g>
+
+    <!-- Elegant Flowing Silk Drapes Cascading from Mandap -->
+    <g id="mandapDrapes" opacity="0.85">
+      <!-- Left Drape -->
+      <path d="M80,140 C110,200 95,300 70,440 L95,440 C115,300 130,200 110,140 Z" fill="url(#silkBlush)"/>
+      <path d="M78,140 C100,220 90,320 74,440" stroke="#ECA8B1" stroke-width="1" fill="none"/>
+      <!-- Right Drape -->
+      <path d="M470,140 C440,200 455,300 480,440 L455,440 C435,300 420,200 440,140 Z" fill="url(#silkBlush)"/>
+      <path d="M472,140 C450,220 460,320 476,440" stroke="#ECA8B1" stroke-width="1" fill="none"/>
+      <!-- Top Valance Festoon -->
+      <path d="M80,140 Q177,175 275,155 Q373,175 470,140 Q373,155 275,135 Q177,155 80,140 Z" fill="url(#silkBlush)"/>
+    </g>
+
+    <!-- Floral Chandeliers & Cascading Tuberose (Mogra) & Rose Garlands -->
+    <g id="mandapFlorals">
+      <!-- Top Garland Swag -->
+      <path d="M80,145 Q275,190 470,145" stroke="url(#marigoldGarland)" stroke-width="5" stroke-dasharray="8,4" fill="none"/>
+      <path d="M80,152 Q275,200 470,152" stroke="url(#roseGarland)" stroke-width="4.5" stroke-dasharray="6,3" fill="none"/>
+
+      <!-- Hanging Mogra Floral Strings (Vertical Bells) -->
+      <g stroke="#FFF9E6" stroke-width="2" stroke-dasharray="4,6">
+        <line x1="130" y1="160" x2="130" y2="240"/>
+        <line x1="170" y1="170" x2="170" y2="260"/>
+        <line x1="220" y1="175" x2="220" y2="230"/>
+        <line x1="330" y1="175" x2="330" y2="230"/>
+        <line x1="380" y1="170" x2="380" y2="260"/>
+        <line x1="420" y1="160" x2="420" y2="240"/>
+      </g>
+      <!-- Lotus / Rose Drops at bottom of strings -->
+      <circle cx="130" cy="245" r="5" fill="#FF7675"/>
+      <circle cx="170" cy="265" r="5" fill="#FF7675"/>
+      <circle cx="220" cy="235" r="4.5" fill="#FF7675"/>
+      <circle cx="330" cy="235" r="4.5" fill="#FF7675"/>
+      <circle cx="380" cy="265" r="5" fill="#FF7675"/>
+      <circle cx="420" cy="245" r="5" fill="#FF7675"/>
+    </g>
+  </g>
+
+  <!-- The Wedding Couple: Kunal & Sonal in Sacred Varmala Ceremony -->
+  <g id="weddingCoupleCeremony" transform="translate(275, 345)">
+    <!-- Stage Platform Shadow -->
+    <ellipse cx="0" cy="120" rx="110" ry="16" fill="#4B3A2C" opacity="0.16"/>
+
+    <!-- Sacred Agni Kund in Background Center -->
+    <g transform="translate(0, 75) scale(0.65)" opacity="0.75">
+      <polygon points="-30,30 30,30 20,10 -20,10" fill="#A04000"/>
+      <path d="M-8,10 C-10,-5 0,-20 0,-20 C0,-20 10,-5 8,10 Z" fill="#F39C12"/>
+      <path d="M-4,10 C-5,0 0,-10 0,-10 C0,-10 5,0 4,10 Z" fill="#FFF275"/>
+    </g>
+
+    <!-- GROOM (KUNAL) - Regal Royal Sherwani, Embroidered Stole & Safa -->
+    <g transform="translate(-48, -10)">
+      <!-- Royal Churidar Trousers -->
+      <path d="M-22,50 L-26,120 L-10,120 L-8,50 Z" fill="#FAF5E8"/>
+      <path d="M-6,50 L-4,120 L12,120 L8,50 Z" fill="#FAF5E8"/>
+      <!-- Jootis / Royal Mojari Shoes -->
+      <path d="M-28,120 C-32,124 -8,124 -8,120 Z" fill="url(#mandapGold)"/>
+      <path d="M-4,120 C-2,124 16,124 14,120 Z" fill="url(#mandapGold)"/>
+
+      <!-- Cream / Raw Silk Sherwani with Zardozi Work -->
+      <path d="M-28,-22 C-28,-32 -8,-36 0,-36 C10,-36 24,-28 24,-22 L20,52 L-24,52 Z" fill="#FAF5E8"/>
+      <!-- Ornate Gold Placket & Buttons -->
+      <line x1="-2" y1="-34" x2="-2" y2="50" stroke="url(#mandapGold)" stroke-width="2.5"/>
+      <circle cx="-2" cy="-20" r="1.5" fill="#840B1D"/>
+      <circle cx="-2" cy="-5" r="1.5" fill="#840B1D"/>
+      <circle cx="-2" cy="10" r="1.5" fill="#840B1D"/>
+      <circle cx="-2" cy="25" r="1.5" fill="#840B1D"/>
+
+      <!-- Maroon & Gold Embroidered Velvet Shawl (Doshala) -->
+      <path d="M-30,-20 C-42,10 -36,65 -32,110 C-26,110 -20,110 -22,105 C-26,60 -26,10 -16,-20 Z" fill="url(#royalCrimson)"/>
+      <line x1="-32" y1="108" x2="-22" y2="108" stroke="url(#mandapGold)" stroke-width="2.5"/>
+
+      <!-- Multi-strand Pearl & Emerald Mala -->
+      <path d="M-15,-20 C-8,5 4,5 12,-20" stroke="#FFFDF6" stroke-width="2" fill="none" stroke-dasharray="2,2"/>
+      <path d="M-18,-20 C-8,12 6,12 15,-20" stroke="url(#mandapGold)" stroke-width="1.5" fill="none" stroke-dasharray="2,2"/>
+      <circle cx="2" cy="12" r="3" fill="#2ECC71"/>
+
+      <!-- Groom Gently Placing Varmala / Holding Bride's Hands -->
+      <path d="M18,-15 C32,-2 38,15 28,30" stroke="#FAF5E8" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <circle cx="28" cy="32" r="5" fill="#F7D0B7"/>
+
+      <!-- Groom Head & Royal Safa -->
+      <ellipse cx="-2" cy="-58" rx="13" ry="16" fill="#F7D0B7"/>
+      <!-- Royal Safa (Turban) in Blush Pink & Gold Zari -->
+      <path d="M-18,-64 C-20,-88 15,-88 16,-64 C16,-60 -18,-60 -18,-64 Z" fill="url(#silkBlush)"/>
+      <path d="M-16,-72 C-6,-94 14,-86 16,-72 Z" fill="url(#mandapGold)" opacity="0.65"/>
+      <!-- Royal Kalgi (Feather Brooch with Emerald & Pearl Drop) -->
+      <g transform="translate(-6, -82)">
+        <polygon points="0,0 -8,-24 0,-18 4,-24 2,0" fill="#FFFFFF"/>
+        <circle cx="0" cy="0" r="3.5" fill="url(#mandapGold)"/>
+        <circle cx="0" cy="0" r="1.5" fill="#2ECC71"/>
+        <circle cx="0" cy="4" r="1.5" fill="#FFF"/>
+      </g>
+    </g>
+
+    <!-- BRIDE (SONAL) - Breathtaking Bridal Crimson Lehenga with Gold Zari & Royal Veil -->
+    <g transform="translate(48, -5)">
+      <!-- Royal Flared Bridal Lehenga Skirt -->
+      <path d="M-22,35 C-28,68 -45,100 -55,120 C-55,124 45,124 45,120 C35,100 20,68 14,35 Z" fill="url(#royalCrimson)"/>
+      <!-- Intricate Gold Zari Embroidered Broad Border (Gota Patti) -->
+      <path d="M-52,116 Q-5,110 42,116" stroke="url(#mandapGold)" stroke-width="5" fill="none"/>
+      <path d="M-46,104 Q-5,98 36,104" stroke="url(#mandapGold)" stroke-width="2" fill="none"/>
+      <path d="M-38,88 Q-5,82 28,88" stroke="url(#mandapGold)" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+      <path d="M-30,68 Q-5,62 20,68" stroke="url(#mandapGold)" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+
+      <!-- Fitted Embroidered Choli / Blouse -->
+      <path d="M-16,-18 C-16,-30 2,-32 14,-28 L16,35 L-14,35 Z" fill="url(#royalCrimson)"/>
+      
+      <!-- Sheer Embroidered Red Bridal Odhna / Veil (Dupatta) -->
+      <path d="M-14,-68 C-28,-42 -38,15 -32,105 C-27,105 -22,105 -25,25 C-22,-10 -6,-48 8,-60 Z" fill="url(#roseGarland)" opacity="0.8"/>
+      <path d="M-10,-68 C2,-90 26,-80 28,-58 C32,0 42,45 46,110 C40,110 35,110 32,38 C26,-20 18,-48 2,-58 Z" fill="url(#roseGarland)" opacity="0.8"/>
+
+      <!-- Sonal Head & Gentle Tender Expression -->
+      <ellipse cx="2" cy="-56" rx="12" ry="15" fill="#FCE2CE"/>
+      <circle cx="12" cy="-60" r="9" fill="#1C130B"/>
+      
+      <!-- Kundan Matha Patti & Maang Tikka -->
+      <line x1="-2" y1="-70" x2="-2" y2="-60" stroke="url(#mandapGold)" stroke-width="1.8"/>
+      <circle cx="-2" cy="-60" r="3" fill="url(#mandapGold)"/>
+      <circle cx="-2" cy="-60" r="1.2" fill="#840B1D"/>
+      <path d="M-12,-62 Q-2,-58 8,-62" stroke="url(#mandapGold)" stroke-width="1.5" fill="none"/>
+
+      <!-- Bridal Nath (Royal Nose Ring) -->
+      <circle cx="-7" cy="-53" r="3.5" fill="none" stroke="url(#mandapGold)" stroke-width="0.9"/>
+      <line x1="-5" y1="-53" x2="6" y2="-58" stroke="url(#mandapGold)" stroke-width="0.5" stroke-dasharray="1,1"/>
+
+      <!-- Kundan Choker & Rani Haar (Royal Necklaces) -->
+      <path d="M-7,-42 C-1,-36 5,-36 9,-42" stroke="url(#mandapGold)" stroke-width="3.5" fill="none"/>
+      <path d="M-10,-40 C-1,-26 8,-26 12,-40" stroke="url(#mandapGold)" stroke-width="2" fill="none" stroke-dasharray="2,2"/>
+      <circle cx="2" cy="-28" r="3" fill="#840B1D"/>
+
+      <!-- Bridal Chooda (Red & Ivory Bangles) & Golden Kaleerein -->
+      <g transform="translate(-16, 25)">
+        <rect x="0" y="0" width="14" height="6" rx="2" fill="#840B1D"/>
+        <rect x="3" y="0" width="8" height="6" fill="#FFFFFF"/>
+        <!-- Golden Kaleerein hanging from bangles -->
+        <polygon points="5,6 2,16 8,16" fill="url(#mandapGold)"/>
+        <circle cx="5" cy="18" r="1.5" fill="url(#mandapGold)"/>
+        <!-- Henna-stained hands -->
+        <circle cx="15" cy="4" r="4" fill="#C0392B"/>
+      </g>
+    </g>
+
+    <!-- Exquisite Varmala (Garland of Fresh Red Roses & White Tuberoses) Exchanged -->
+    <path d="M-40,-5 C-20,42 20,42 40,-5" stroke="url(#roseGarland)" stroke-width="6" stroke-dasharray="7,3" fill="none"/>
+    <path d="M-40,-5 C-20,42 20,42 40,-5" stroke="#FFFBF0" stroke-width="2" stroke-dasharray="2,6" fill="none"/>
+  </g>
+
+  <!-- Golden Ring & Sparkles in Foreground -->
+  <g transform="translate(275, 470)" filter="url(#divineShimmer)">
+    <circle cx="-12" cy="0" r="10" fill="none" stroke="url(#mandapGold)" stroke-width="2.5"/>
+    <circle cx="12" cy="0" r="10" fill="none" stroke="url(#mandapGold)" stroke-width="2.5"/>
+    <polygon points="12,-16 15,-10 21,-10 16,-6 18,0 12,-4 6,0 8,-6 3,-10 9,-10" fill="#FFFFFF"/>
+    <polygon points="0,-8 2,-2 8,0 2,2 0,8 -2,2 -8,0 -2,-2" fill="#FFEAA7"/>
+  </g>
+
+  <!-- Cascading Petals in Foreground -->
+  <g opacity="0.8">
+    <path d="M120,460 C110,455 115,440 125,445 C135,450 130,465 120,460 Z" fill="#D63031"/>
+    <path d="M430,455 C420,450 425,435 435,440 C445,445 440,460 430,455 Z" fill="#D63031"/>
+    <path d="M210,500 C200,495 205,480 215,485 C225,490 220,505 210,500 Z" fill="#FDCB6E"/>
+    <path d="M340,495 C330,490 335,475 345,480 C355,485 350,500 340,495 Z" fill="#FDCB6E"/>
+  </g>
+</svg>

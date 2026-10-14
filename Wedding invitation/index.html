@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Kunal Weds Sonal — Royal Wedding Invitation | 13 November 2026</title>
+  <meta name="description" content="You are cordially invited to celebrate the wedding celebrations of Kunal Lalwani & Sonal Saheta on 10–13 November 2026 in Ahmedabad.">
+  <meta name="theme-color" content="#FAF8F5">
+
+  <!-- OpenGraph / Social Sharing Metadata -->
+  <meta property="og:title" content="Kunal Weds Sonal — Wedding Invitation">
+  <meta property="og:description" content="Two Hearts, Two Souls, One Beautiful Forever. Join us as Kunal Lalwani & Sonal Saheta unite in holy matrimony on 13 November 2026.">
+  <meta property="og:image" content="assets/logo/sk-monogram.svg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo/sk-monogram.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Floating Falling Petals Canvas -->
+  <canvas id="petalsCanvas"></canvas>
+
+  <div class="invitation-app">
+
+    <!-- Sticky Luxury Header -->
+    <header class="sticky-header" id="stickyHeader">
+      <div class="scroll-progress-line" id="scrollProgressBar"></div>
+
+      <!-- Left: SK Monogram Brand Badge -->
+      <div class="header-left">
+        <button class="header-monogram-btn" id="headerHomeBtn" aria-label="Go to top">
+          <img src="assets/logo/sk-monogram.png" onerror="this.onerror=null; this.src='assets/logo/sk-monogram.svg';" alt="SK Monogram" class="header-logo-icon">
+          <span class="header-title-text">Kunal &amp; Sonal</span>
+        </button>
+      </div>
+
+      <!-- Center: Current Chapter Badge -->
+      <div class="header-chapter-badge" id="headerChapterBadge">
+        1/10: Welcome
+      </div>
+
+      <!-- Right: Action Controls -->
+      <div class="header-right">
+        <!-- Ambient Music Toggle -->
+        <button class="music-control-btn" id="musicToggleBtn" aria-label="Play Wedding Music" title="Play Ambient Shehnai &amp; Sitar Music">
+          <div class="equalizer-wave">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </div>
+        </button>
+
+        <!-- Petal Shower Toggle -->
+        <button class="petals-toggle-btn" id="petalsToggleBtn" aria-label="Toggle Flower Petals" title="Toggle Flower Petal Shower">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2C12 2 15 7 15 10C15 12.5 13.5 14 12 14C10.5 14 9 12.5 9 10C9 7 12 2 12 2Z"/>
+            <path d="M22 12C22 12 17 15 14 15C11.5 15 10 13.5 10 12C10 10.5 11.5 9 14 9C17 9 22 12 22 12Z"/>
+            <path d="M12 22C12 22 9 17 9 14C9 11.5 10.5 10 12 10C13.5 10 15 11.5 15 14C15 17 12 22 12 22Z"/>
+            <path d="M2 12C2 12 7 9 10 9C12.5 9 14 10.5 14 12C14 13.5 12.5 15 10 15C7 15 2 12 2 12Z"/>
+          </svg>
+        </button>
+
+        <!-- View Mode Switcher (Storybook vs Continuous Scroll) -->
+        <button class="view-mode-btn" id="viewModeBtn" aria-label="Switch View Mode" title="Switch to Storybook Card Mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M7 3v18"/>
+          </svg>
+        </button>
+
+        <!-- Event Menu Drawer Trigger -->
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Open Event Menu" title="View All Events">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Navigation Drawer Modal -->
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <aside class="nav-drawer" id="navDrawer" aria-label="Event Menu">
+      <div class="drawer-header">
+        <h2 class="drawer-title">Wedding Itinerary</h2>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="drawer-events-list">
+        <li class="drawer-event-item">
+          <a href="#section-welcome" class="drawer-event-link" data-target="section-welcome">
+            <span class="drawer-event-num">1</span>
+            <div class="drawer-event-details">
+              <span class="drawer-event-name">Welcome Screen</span>
+              <span class="drawer-event-date">Lord Ganesh &amp; SK Monogram</span>
+            </div>
+          </a>
+        </li>
+        <li class="drawer-event-item">
+          <a href="#section-invitation" class="drawer-event-link" data-target="section-invitation">
+            <span class="drawer-event-num">2</span>
+            <div class="drawer-event-details">
+              <span class="drawer-event-name">The Wedding Invitation</span>
+              <span class="drawer-event-date">Family Blessings</span>
+            </div>
+          </a>
+        </li>
+        <li class="drawer-event-item">
+          <a href="#section-guru-ghar" class="drawer-event-link" data-target="section-guru-ghar">
+            <span class="drawer-event-num">3</span>
+            <div class="drawer-event-details">
+              <span class="drawer-event-name">Guru Ghar &amp; Mehendi</span>
+              <span class="drawer-event-date">Tue, 10 Nov 2026 • 11:00 AM &amp; 9:00 PM</span>
+            </div>
+          </a>
+        </li>
+        <li class="drawer-event-item">
+          <a href="#section-sacred-thread" class="drawer-event-link" data-target="section-sacred-thread">
+            <span class="drawer-event-num">4</span>
+            <div class="drawer-event-details">
+              <span class="drawer-event-name">Sacred Thread Ceremony</span>
+              <span class="drawer-event-date">Wed, 11 Nov 2026 • 11:00 AM Onwards</span>
+            </div>
+          </a>
+        </li>
+        <li class="drawer-event-item">
+          <a href="#section-behrana-sahib" class="drawer-event-link" data-target="section-behrana-sahib">
+            <span class="drawer-event-num">5</span>
+            <div class="drawer-event-details">
+              <span class="drawer-event-name">Behrana Sahib</span>
+              <span class="drawer-event-date">Wed, 11 Nov 2026 • 8:00 PM Onwards</span>
+            </div>
+          </a>
+        </li>
+        <li class="drawer-event-item">
+          <a href="#section-carnival" class="drawer-event-link" data-target="section-carnival">
+            <span class="drawer-event-num">6</span>
+            <div class="drawer-event-details">
+              <span class="drawer-event-name">Carnival</span>
+              <span class="drawer-event-date">Thu, 12 Nov 2026 • 12:00 PM Onwards</span>
+            </div>
+          </a>
+        </li>
+        <li class="drawer-event-item">
+          <a href="#section-sangeet" class="drawer-event-link" data-target="section-sangeet">
+            <span class="drawer-event-num">7</span>
+            <div class="drawer-event-details">
+              <span class="drawer-event-name">Engagement &amp; Sangeet</span>
+              <span class="drawer-event-date">Thu, 12 Nov 2026 • 8:00 PM Onwards</span>
+            </div>
+          </a>
+        </li>
+        <li class="drawer-event-item">
+          <a href="#section-wedding" class="drawer-event-link" data-target="section-wedding">
+            <span class="drawer-event-num">8</span>
+            <div class="drawer-event-details">
+              <span class="drawer-event-name">The Wedding Ceremony</span>
+              <span class="drawer-event-date">Fri, 13 Nov 2026 • 4:00 PM Onwards</span>
+            </div>
+          </a>
+        </li>
+        <li class="drawer-event-item">
+          <a href="#section-reception" class="drawer-event-link" data-target="section-reception">
+            <span class="drawer-event-num">9</span>
+            <div class="drawer-event-details">
+              <span class="drawer-event-name">The Reception</span>
+              <span class="drawer-event-date">Fri, 13 Nov 2026 • 9:00 PM Onwards</span>
+            </div>
+          </a>
+        </li>
+        <li class="drawer-event-item">
+          <a href="#section-family" class="drawer-event-link" data-target="section-family">
+            <span class="drawer-event-num">10</span>
+            <div class="drawer-event-details">
+              <span class="drawer-event-name">Special Invitation With Love</span>
+              <span class="drawer-event-date">From Yuvraj &amp; Shivangi</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Quick Action in Drawer -->
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+        <button class="btn-action-gold btn-calendar-ics" style="width: 100%;">
+          📅 Save All Events to Calendar (.ics)
+        </button>
+        <button class="btn-action-gold btn-whatsapp-trigger" style="width: 100%;">
+          💬 Share Invitation via WhatsApp
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Container -->
+    <main class="story-container" id="storyContainer">
+
+      <!-- ========================================== -->
+      <!-- PAGE 1 — THE WELCOME SCREEN               -->
+      <!-- ========================================== -->
+      <section class="invitation-section" id="section-welcome" data-chapter="0">
+        <!-- Corner Flourishes -->
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-right">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-right">
+
+        <!-- 1. Lord Ganesh Ji Illustration at Top -->
+        <div class="welcome-ganesh-wrap anim-fade-up delay-1">
+          <img src="assets/illustrations/ganesh-blessing.svg" alt="Lord Shree Ganesh" class="welcome-ganesh-img float-slow">
+        </div>
+
+        <!-- 2. SK Gold Monogram Logo -->
+        <div class="monogram-container anim-fade-up delay-2">
+          <img src="assets/logo/sk-monogram.png" onerror="this.onerror=null; this.src='assets/logo/sk-monogram.svg';" alt="SK Gold Monogram" class="monogram-logo">
+        </div>
+
+        <!-- 3. Title: Kunal Weds Sonal -->
+        <h1 class="welcome-title-main anim-fade-up delay-3 gold-shimmer">
+          Kunal Weds Sonal
+        </h1>
+
+        <!-- Floral Arch Divider -->
+        <div class="divider-ornament anim-fade-up delay-3">
+          <img src="assets/illustrations/ornamental-divider.svg" alt="">
+        </div>
+
+        <!-- 4. Wedding Date -->
+        <div class="anim-fade-up delay-4">
+          <span class="welcome-date-badge">
+            Friday, 13 November 2026
+          </span>
+        </div>
+
+        <!-- 5. Enter Invitation Action -->
+        <div class="anim-fade-up delay-5" style="margin-top: 1rem;">
+          <button class="btn-enter-invitation pulse-ring" id="enterInvitationBtn">
+            <span>Begin Our Story</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PAGE 2 — THE WEDDING INVITATION           -->
+      <!-- ========================================== -->
+      <section class="invitation-section" id="section-invitation" data-chapter="1">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-right">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-right">
+
+        <!-- Illustration: Traditional Indian Couple -->
+        <div class="section-illustration-wrapper">
+          <img src="assets/illustrations/wedding-invitation-couple.svg" alt="Kunal &amp; Sonal Traditional Couple Portrait" class="section-illustration float-slow">
+        </div>
+
+        <!-- Heading -->
+        <h2 class="title-section" style="margin-bottom: 0.75rem;">
+          Two Hearts, Two Souls, One Beautiful Forever
+        </h2>
+
+        <!-- Family Blessings Block -->
+        <div class="blessings-card">
+          <p class="blessings-intro">With the divine blessings of</p>
+          <p class="grandparents-names">Late Mr. Pahelaj Rai Saheta and Late Mrs. Shakuntaladevi Saheta</p>
+          <p class="grandparents-and">and</p>
+          <p class="grandparents-names">Late Mr. Gopaldas Lalwani and Late Mrs. Kamladevi Lalwani</p>
+        </div>
+
+        <!-- Invitation Body Text -->
+        <p class="invitation-body-text">
+          Together with our loved ones, we invite you to join us as we begin our journey of love, laughter, and forever.
+        </p>
+
+        <div class="divider-ornament">
+          <img src="assets/illustrations/ornamental-divider.svg" alt="">
+        </div>
+
+        <!-- The Couple Names -->
+        <div class="couple-names-block">
+          <div class="groom-name">Kunal Lalwani</div>
+          <p class="parentage-line">Beloved Son of Mr. Naresh Lalwani and Mrs. Jaya Lalwani</p>
+
+          <div class="weds-divider">Weds</div>
+
+          <div class="bride-name">Sonal Saheta</div>
+          <p class="parentage-line">Beloved Daughter of Mr. Rajkumar Saheta and Mrs. Dhanwanti Saheta</p>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PAGE 3 — DIVINE BLESSINGS & JOYFUL BEGINNINGS -->
+      <!-- ========================================== -->
+      <section class="invitation-section" id="section-guru-ghar" data-chapter="2">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-right">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-right">
+
+        <!-- Illustration -->
+        <div class="section-illustration-wrapper">
+          <img src="assets/illustrations/guru-ghar-mehendi.svg" alt="Guru Ghar and Mehendi Ceremony Scene" class="section-illustration">
+        </div>
+
+        <!-- Heading -->
+        <h2 class="title-section">
+          Divine Blessings &amp; Joyful Beginnings
+        </h2>
+
+        <!-- Religious Greeting -->
+        <div class="religious-greeting gurmukhi-text" style="margin-top: 0.5rem;">
+          🙏 ੴ ਸਤਿਨਾਮ ਵਾਹਿਗੁਰੂ 🙏
+        </div>
+
+        <!-- Dual Events Container -->
+        <div class="dual-event-container">
+          <!-- Event 1: Guru Ghar Aaye -->
+          <div class="sub-event-card">
+            <span class="sub-event-badge">Auspicious Beginning</span>
+            <h3 class="sub-event-title">Guru Ghar Aaye</h3>
+            <div class="sub-event-time">Time: 11:00 AM Onwards</div>
+            <p class="ceremonial-quote">“Guru Sahib Ji Meher, Ghar Mein Sukh-Shanti Ji Leher…”</p>
+          </div>
+
+          <!-- Event 2: Followed by Mehendi Ceremony -->
+          <div class="sub-event-card">
+            <span class="sub-event-badge" style="color: #C67873; background: rgba(198, 120, 115, 0.15);">Festive Henna Celebration</span>
+            <h3 class="sub-event-title">Followed by Mehendi Ceremony</h3>
+            <div class="sub-event-time">Time: 9:00 PM Onwards</div>
+            <p class="ceremonial-quote">“Mehendi Ja Rang, Khushiyun Ji Bahaar…”</p>
+          </div>
+        </div>
+
+        <!-- Consistent Event Meta Block -->
+        <div class="event-meta-block">
+          <div class="meta-label">DATE</div>
+          <div class="meta-date">Tuesday, 10 November 2026</div>
+
+          <div class="meta-label">VENUE</div>
+          <div class="meta-venue-name">Our Residence</div>
+          <div class="meta-venue-address">
+            B-301, Shikhar Shine<br>
+            Nana Chiloda, Ahmedabad – 382330
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=B-301+Shikhar+Shine+Nana+Chiloda+Ahmedabad+382330" 
+             target="_blank" rel="noopener noreferrer" class="btn-action-gold venue-directions-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <span>Get Directions</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PAGE 4 — SACRED TRADITIONS & BLESSINGS    -->
+      <!-- ========================================== -->
+      <section class="invitation-section" id="section-sacred-thread" data-chapter="3">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-right">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-right">
+
+        <!-- Illustration -->
+        <div class="section-illustration-wrapper">
+          <img src="assets/illustrations/sacred-thread-ceremony.svg" alt="Sacred Thread Janeu Ceremony" class="section-illustration">
+        </div>
+
+        <!-- Heading -->
+        <h2 class="title-section">
+          Sacred Traditions &amp; Blessings
+        </h2>
+
+        <!-- Religious Greeting -->
+        <div class="religious-greeting" style="margin-top: 0.5rem;">
+          🙏 Ek Tu Hi Nirankar 🙏
+        </div>
+
+        <!-- Invitation Message -->
+        <p class="subtitle-verse" style="max-width: 420px; margin: 0.5rem auto;">
+          Mr. Naresh Lalwani and Mrs. Jaya Lalwani cordially invite you and your family to the auspicious Sacred Thread Ceremony of their beloved sons.
+        </p>
+
+        <!-- Names -->
+        <div class="sons-highlight">
+          Kunal Lalwani &amp; Yuvraj Lalwani
+        </div>
+
+        <!-- Ceremonial Verse -->
+        <p class="ceremonial-quote" style="text-align: center; margin: 0.5rem 0;">
+          “Janeu Jo Pavitra Bandhan, Sanskaran Ji Shaan,<br>
+          Khushiyun Ain Barkat Saan, Vadhe Parivaar Jo Maan…”
+        </p>
+
+        <div class="divider-ornament">
+          <img src="assets/illustrations/ornamental-divider.svg" alt="">
+        </div>
+
+        <!-- Consistent Event Meta Block -->
+        <div class="event-meta-block">
+          <div class="meta-label">DATE</div>
+          <div class="meta-date">Wednesday, 11 November 2026</div>
+
+          <div class="meta-label">EVENT</div>
+          <div class="meta-event-title">Sacred Thread Ceremony</div>
+
+          <div class="meta-label">TIME</div>
+          <div class="meta-time">11:00 AM Onwards</div>
+
+          <div class="meta-label">VENUE</div>
+          <div class="meta-venue-name">Our Sweet Home</div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PAGE 5 — AN EVENING OF DIVINE BLESSINGS   -->
+      <!-- ========================================== -->
+      <section class="invitation-section" id="section-behrana-sahib" data-chapter="4">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-right">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-right">
+
+        <!-- Illustration -->
+        <div class="section-illustration-wrapper">
+          <img src="assets/illustrations/behrana-sahib.svg" alt="Devotional Behrana Sahib Sindhi Tradition" class="section-illustration">
+        </div>
+
+        <!-- Heading -->
+        <h2 class="title-section">
+          An Evening of Divine Blessings
+        </h2>
+
+        <!-- Religious Greeting -->
+        <div class="religious-greeting" style="margin-top: 0.5rem;">
+          🙏 Jai Jhulelal 🙏
+        </div>
+
+        <!-- Supporting Invitation -->
+        <p class="subtitle-verse" style="max-width: 420px; margin: 0.5rem auto;">
+          With devotion in our hearts and blessings from Jhulelal Sai, we welcome you to join us for this auspicious evening.
+        </p>
+
+        <!-- Ceremonial Verse -->
+        <p class="ceremonial-quote" style="text-align: center; margin: 0.75rem 0;">
+          “Jhulelal Sai Jo Aashirwad, Khushiyun Ji Saugaat,<br>
+          Ghar Mein Sukh, Shanti Ain Barkat Ji Barsaat…”
+        </p>
+
+        <div class="divider-ornament">
+          <img src="assets/illustrations/ornamental-divider.svg" alt="">
+        </div>
+
+        <!-- Consistent Event Meta Block -->
+        <div class="event-meta-block">
+          <div class="meta-label">DATE</div>
+          <div class="meta-date">Wednesday, 11 November 2026</div>
+
+          <div class="meta-label">EVENT</div>
+          <div class="meta-event-title">Behrana Sahib</div>
+
+          <div class="meta-label">TIME</div>
+          <div class="meta-time">8:00 PM Onwards</div>
+
+          <div class="meta-label">VENUE</div>
+          <div class="meta-venue-name">Our Sweet Home</div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PAGE 6 — CARNIVAL                         -->
+      <!-- ========================================== -->
+      <section class="invitation-section" id="section-carnival" data-chapter="5">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-right">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-right">
+
+        <!-- Illustration -->
+        <div class="section-illustration-wrapper">
+          <img src="assets/illustrations/carnival-celebration.svg" alt="Carnival Garden Celebration Kunal and Sonal" class="section-illustration float-slow">
+        </div>
+
+        <!-- Main Heading -->
+        <h2 class="title-section carnival-heading">
+          Carnival
+        </h2>
+
+        <!-- Subheading -->
+        <div class="carnival-subheading">
+          Colours of Joy, A Splash of Fun
+        </div>
+
+        <!-- Supporting Line -->
+        <p class="subtitle-verse" style="margin: 0.5rem auto 1rem;">
+          “Let the laughter and celebrations begin!”
+        </p>
+
+        <!-- Consistent Event Meta Block -->
+        <div class="event-meta-block">
+          <div class="meta-label">DATE</div>
+          <div class="meta-date">Thursday, 12 November 2026</div>
+
+          <div class="meta-label">EVENT</div>
+          <div class="meta-event-title" style="color: #D63031;">Carnival</div>
+
+          <div class="meta-label">TIME</div>
+          <div class="meta-time">12:00 PM Onwards</div>
+
+          <div class="meta-label">VENUE</div>
+          <div class="meta-venue-name">Shayona Farm</div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Shayona+Farm+Nana+Chiloda+Ahmedabad+382330" 
+             target="_blank" rel="noopener noreferrer" class="btn-action-gold venue-directions-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <span>Get Directions</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PAGE 7 — ENGAGEMENT & SANGEET NIGHT       -->
+      <!-- ========================================== -->
+      <section class="invitation-section" id="section-sangeet" data-chapter="6">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-right">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-right">
+
+        <!-- Illustration -->
+        <div class="section-illustration-wrapper">
+          <img src="assets/illustrations/engagement-sangeet.svg" alt="Engagement &amp; Sangeet Night Party" class="section-illustration float-slow">
+        </div>
+
+        <!-- Main Heading -->
+        <h2 class="title-section gold-shimmer">
+          Engagement &amp; Sangeet Night
+        </h2>
+
+        <!-- Subheading -->
+        <p class="subtitle-verse" style="color: #FFEAA7; font-weight: 500; margin: 0.75rem 0 0.5rem;">
+          “Get ready to shake a leg, steal the spotlight, and set the dance floor on fire!”
+        </p>
+
+        <!-- Supporting Text -->
+        <p class="subtitle-verse" style="max-width: 440px; margin: 0 auto 1.25rem;">
+          “With sparkling rings, dazzling moves, glamorous vibes, and beats that keep us grooving, let's turn this beautiful night into a celebration to remember!”
+        </p>
+
+        <!-- Consistent Event Meta Block -->
+        <div class="event-meta-block">
+          <div class="meta-label" style="color: #FFEAA7;">DATE</div>
+          <div class="meta-date">Thursday, 12 November 2026</div>
+
+          <div class="meta-label" style="color: #FFEAA7;">EVENT</div>
+          <div class="meta-event-title" style="color: #FFF2CA;">Engagement &amp; Sangeet Night</div>
+
+          <div class="meta-label" style="color: #FFEAA7;">TIME</div>
+          <div class="meta-time">8:00 PM Onwards</div>
+
+          <div class="meta-label" style="color: #FFEAA7;">VENUE</div>
+          <div class="meta-venue-name">Shayona Farm</div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Shayona+Farm+Nana+Chiloda+Ahmedabad+382330" 
+             target="_blank" rel="noopener noreferrer" class="btn-action-gold venue-directions-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <span>Get Directions</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PAGE 8 — THE WEDDING CEREMONY             -->
+      <!-- ========================================== -->
+      <section class="invitation-section" id="section-wedding" data-chapter="7">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-right">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-right">
+
+        <!-- Grand Mandap Ceremony Illustration (Visual Highlight) -->
+        <div class="section-illustration-wrapper" style="max-width: 360px;">
+          <img src="assets/illustrations/wedding-mandap-couple.svg" alt="Grand Indian Wedding Mandap Ceremony" class="section-illustration float-slow">
+        </div>
+
+        <div style="text-align: center;">
+          <span class="wedding-crown-badge">The Auspicious Wedding Day</span>
+        </div>
+
+        <!-- Main Heading -->
+        <h2 class="title-section gold-shimmer" style="margin-bottom: 0.5rem;">
+          A Beautiful Wedlock 💍
+        </h2>
+
+        <!-- Supporting Text -->
+        <p class="subtitle-verse" style="max-width: 420px; margin: 0.5rem auto;">
+          “Two hearts, one promise, and a lifetime of togetherness…<br>
+          Bound by love, blessed by destiny, united forever.”
+        </p>
+
+        <div class="divider-ornament">
+          <img src="assets/illustrations/ornamental-divider.svg" alt="">
+        </div>
+
+        <!-- Consistent Event Meta Block -->
+        <div class="event-meta-block">
+          <div class="meta-label">DATE</div>
+          <div class="meta-date">Friday, 13 November 2026</div>
+
+          <div class="meta-label">EVENT</div>
+          <div class="meta-event-title">Wedding Ceremony</div>
+
+          <div class="meta-label">TIME</div>
+          <div class="meta-time">4:00 PM Onwards</div>
+
+          <div class="meta-label">VENUE</div>
+          <div class="meta-venue-name">Shayona Farm</div>
+          <div class="meta-venue-address">
+            Nana Chiloda, Ahmedabad – 382330
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Shayona+Farm+Nana+Chiloda+Ahmedabad+382330" 
+             target="_blank" rel="noopener noreferrer" class="btn-action-gold venue-directions-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <span>Get Directions</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PAGE 9 — THE RECEPTION                    -->
+      <!-- ========================================== -->
+      <section class="invitation-section" id="section-reception" data-chapter="8">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-right">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-right">
+
+        <!-- Illustration: Sophisticated White Aesthetic Reception -->
+        <div class="section-illustration-wrapper">
+          <img src="assets/illustrations/reception-evening.svg" alt="White Aesthetic Wedding Reception Evening" class="section-illustration float-slow">
+        </div>
+
+        <!-- Main Heading -->
+        <h2 class="title-section" style="color: #FFF9E6; margin-bottom: 0.5rem;">
+          An Evening of Love &amp; Celebration ✨
+        </h2>
+
+        <!-- Supporting Text -->
+        <p class="subtitle-verse" style="max-width: 440px; margin: 0.5rem auto 1rem;">
+          “The beginning of forever deserves a celebration to remember…<br>
+          Join us for an enchanting evening filled with love, laughter, and beautiful memories!”
+        </p>
+
+        <!-- Consistent Event Meta Block -->
+        <div class="event-meta-block">
+          <div class="meta-label" style="color: #EAD292;">DATE</div>
+          <div class="meta-date">Friday, 13 November 2026</div>
+
+          <div class="meta-label" style="color: #EAD292;">EVENT</div>
+          <div class="meta-event-title" style="color: #FFF9E6;">Reception</div>
+
+          <div class="meta-label" style="color: #EAD292;">TIME</div>
+          <div class="meta-time">9:00 PM Onwards</div>
+
+          <div class="meta-label" style="color: #EAD292;">VENUE</div>
+          <div class="meta-venue-name">Shayona Farm</div>
+          <div class="meta-venue-address">
+            Nana Chiloda, Ahmedabad – 382330
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Shayona+Farm+Nana+Chiloda+Ahmedabad+382330" 
+             target="_blank" rel="noopener noreferrer" class="btn-action-gold venue-directions-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <span>Get Directions</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PAGE 10 — A SPECIAL INVITATION WITH LOVE  -->
+      <!-- ========================================== -->
+      <section class="invitation-section" id="section-family" data-chapter="9">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-top-right">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-left">
+        <img src="assets/illustrations/floral-corner.svg" alt="" class="corner-flourish corner-bottom-right">
+
+        <!-- Family Gratitude Illustration -->
+        <div class="section-illustration-wrapper">
+          <img src="assets/illustrations/family-gratitude.svg" alt="Warm Family Invitation Frame" class="section-illustration float-slow">
+        </div>
+
+        <!-- Main Heading -->
+        <h2 class="title-section" style="color: var(--color-crimson-royal);">
+          A Special Invitation With Love ❤️
+        </h2>
+
+        <!-- Supporting Line -->
+        <p class="subtitle-verse" style="font-weight: 600; color: var(--color-gold-dark); margin: 0.5rem 0;">
+          “Our Brother's Big Day, Our Family's Happiest Celebration!”
+        </p>
+
+        <!-- Message -->
+        <p class="subtitle-verse" style="max-width: 440px; margin: 0.5rem auto;">
+          With hearts full of love, joy, and excitement, we warmly invite you and your loved ones to celebrate the beautiful wedding of
+        </p>
+
+        <div class="groom-name" style="margin: 0.75rem 0 1rem; font-size: 1.8rem;">
+          Kunal ♡ Sonal
+        </div>
+
+        <!-- Family Tribute Box -->
+        <div class="family-tribute-box">
+          <div class="meta-label">CLOSING</div>
+          <div style="font-style: italic; color: var(--color-text-secondary);">With Lots of Love,</div>
+          <div class="yuvraj-shivangi-signoff">Yuvraj &amp; Shivangi ❤️</div>
+
+          <div class="divider-ornament" style="margin: 0.75rem auto;">
+            <img src="assets/illustrations/ornamental-divider.svg" alt="">
+          </div>
+
+          <div class="meta-label">WITH LOVE &amp; BEST COMPLIMENTS FROM</div>
+          <div class="compliments-families">
+            Lalwani, Maherchandani &amp; Sadhwani Families
+          </div>
+        </div>
+
+        <!-- Final Thank You Note -->
+        <p class="final-thankyou-message">
+          Thank you for showering your love and blessings upon us!
+        </p>
+
+        <!-- Interactive Actions for Guests -->
+        <div class="action-buttons-row">
+          <button class="btn-action-gold btn-calendar-ics">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <span>Add to Calendar (.ics)</span>
+          </button>
+
+          <button class="btn-action-gold btn-calendar-google">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM12 11v6M9 14h6"/>
+            </svg>
+            <span>Google Calendar</span>
+          </button>
+
+          <button class="btn-action-gold btn-whatsapp-trigger" style="background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.4); color: #128C7E;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.972.531 1.839.813 2.796.813 3.183 0 5.77-2.586 5.77-5.766.001-3.182-2.585-5.8-5.77-5.8zm3.385 8.163c-.144.405-.837.774-1.17.824-.311.047-.709.072-2.316-.593-1.928-.798-3.149-2.775-3.245-2.903-.095-.128-.779-1.036-.779-1.975 0-.939.492-1.401.666-1.593.175-.192.382-.24.509-.24.127 0 .254.002.366.007.119.006.278-.045.435.334.162.389.553 1.349.601 1.446.048.096.08.209.016.335-.064.127-.096.206-.191.318-.096.111-.201.248-.287.334-.096.095-.196.199-.084.391.112.192.497.82 1.066 1.326.732.651 1.35.853 1.542.949.192.096.303.08.415-.048.112-.128.477-.556.604-.747.127-.191.254-.159.43-.095.175.064 1.112.525 1.303.62.191.096.318.144.366.223.048.08.048.463-.096.868z"/>
+            </svg>
+            <span>Share via WhatsApp</span>
+          </button>
+
+          <button class="btn-action-gold btn-copylink-trigger">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <span>Copy Link</span>
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Bottom Floating Storybook Controls (Active in Storybook mode) -->
+    <div class="storybook-bottom-bar" id="storybookBottomBar">
+      <button class="btn-story-nav" id="prevChapterBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+        <span>Prev</span>
+      </button>
+
+      <span class="story-counter" id="storyCounter">1 / 10</span>
+
+      <button class="btn-story-nav" id="nextChapterBtn">
+        <span>Next</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Toast Notification Banner -->
+    <div class="toast-notice" id="toastNotice" role="status" aria-live="polite"></div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/petals-canvas.js"></script>
+  <script src="js/music-player.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/share.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

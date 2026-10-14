@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="coupleGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FFF8F0" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#FDF2E9" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#F5E6D3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="roseGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5D6CE"/>
+      <stop offset="50%" stop-color="#E5A69B"/>
+      <stop offset="100%" stop-color="#C27A6E"/>
+    </linearGradient>
+    <linearGradient id="sherwaniGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF7DC"/>
+      <stop offset="50%" stop-color="#DDC17A"/>
+      <stop offset="100%" stop-color="#AA883C"/>
+    </linearGradient>
+    <linearGradient id="lehengaMaroon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B23B4B"/>
+      <stop offset="60%" stop-color="#801C2B"/>
+      <stop offset="100%" stop-color="#550D18"/>
+    </linearGradient>
+    <linearGradient id="botanicalSage" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8FA88D"/>
+      <stop offset="100%" stop-color="#5A7558"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Light -->
+  <circle cx="250" cy="240" r="210" fill="url(#coupleGlow)"/>
+
+  <!-- Ornate Jharokha Archway in Background -->
+  <path d="M120,440 L120,220 C120,130 200,90 250,60 C300,90 380,130 380,220 L380,440" 
+        fill="none" stroke="url(#sherwaniGold)" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+  <path d="M135,440 L135,225 C135,145 205,105 250,78 C295,105 365,145 365,225 L365,440" 
+        fill="none" stroke="url(#sherwaniGold)" stroke-width="1.2" opacity="0.4"/>
+  
+  <!-- Chandelier / Lantern hanging from top -->
+  <g transform="translate(250, 60)">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="url(#sherwaniGold)" stroke-width="1.5"/>
+    <polygon points="0,40 -12,55 0,70 12,55" fill="url(#sherwaniGold)" opacity="0.8"/>
+    <circle cx="0" cy="55" r="4" fill="#FFFFFF"/>
+    <circle cx="0" cy="55" r="8" fill="#FFF2B2" opacity="0.5"/>
+  </g>
+
+  <!-- Floral Garlands around Arch -->
+  <!-- Left Garland -->
+  <g id="leftGarland" opacity="0.85">
+    <circle cx="140" cy="180" r="8" fill="url(#roseGold)"/>
+    <circle cx="130" cy="210" r="9" fill="#F8C291"/>
+    <circle cx="135" cy="240" r="8" fill="url(#roseGold)"/>
+    <circle cx="125" cy="270" r="9" fill="#F8C291"/>
+    <circle cx="130" cy="300" r="8" fill="url(#roseGold)"/>
+    <!-- Leaves -->
+    <path d="M125,195 C115,190 115,205 125,200 Z" fill="url(#botanicalSage)"/>
+    <path d="M142,225 C152,220 152,235 142,230 Z" fill="url(#botanicalSage)"/>
+    <path d="M120,255 C110,250 110,265 120,260 Z" fill="url(#botanicalSage)"/>
+    <path d="M138,285 C148,280 148,295 138,290 Z" fill="url(#botanicalSage)"/>
+  </g>
+  <!-- Right Garland -->
+  <g id="rightGarland" opacity="0.85">
+    <circle cx="360" cy="180" r="8" fill="url(#roseGold)"/>
+    <circle cx="370" cy="210" r="9" fill="#F8C291"/>
+    <circle cx="365" cy="240" r="8" fill="url(#roseGold)"/>
+    <circle cx="375" cy="270" r="9" fill="#F8C291"/>
+    <circle cx="370" cy="300" r="8" fill="url(#roseGold)"/>
+    <!-- Leaves -->
+    <path d="M375,195 C385,190 385,205 375,200 Z" fill="url(#botanicalSage)"/>
+    <path d="M358,225 C348,220 348,235 358,230 Z" fill="url(#botanicalSage)"/>
+    <path d="M380,255 C390,250 390,265 380,260 Z" fill="url(#botanicalSage)"/>
+    <path d="M362,285 C352,280 352,295 362,290 Z" fill="url(#botanicalSage)"/>
+  </g>
+
+  <!-- The Couple Illustration (Groom: Kunal, Bride: Sonal) -->
+  <g id="coupleTraditional" transform="translate(250, 310)">
+    <!-- Shadow beneath couple -->
+    <ellipse cx="0" cy="130" rx="90" ry="12" fill="#4A3B32" opacity="0.12"/>
+
+    <!-- GROOM (KUNAL) - Left/Center side -->
+    <g id="groom" transform="translate(-40, 0)">
+      <!-- Sherwani Lower Part -->
+      <path d="M-30,40 L-35,125 C-35,130 15,130 15,125 L10,40 Z" fill="#F8F3E6" stroke="#D1BE8C" stroke-width="1.2"/>
+      <!-- Gold Embroidered border on sherwani -->
+      <line x1="-10" y1="40" x2="-10" y2="125" stroke="url(#sherwaniGold)" stroke-width="2.5"/>
+      <line x1="-35" y1="123" x2="15" y2="123" stroke="url(#sherwaniGold)" stroke-width="2"/>
+
+      <!-- Sherwani Torso -->
+      <path d="M-35,-20 C-35,-30 -10,-35 0,-35 C10,-35 25,-25 25,-20 L20,45 L-30,45 Z" fill="#F8F3E6"/>
+      <!-- Mandarin Collar -->
+      <path d="M-15,-35 C-15,-42 5,-42 5,-35 Z" fill="url(#sherwaniGold)"/>
+
+      <!-- Groom Stole (Dupatta / Shawl) -->
+      <path d="M-38,-20 C-48,10 -40,60 -36,110 C-32,110 -24,110 -24,105 C-28,60 -30,10 -22,-20 Z" fill="url(#roseGold)"/>
+
+      <!-- Groom Head & Face -->
+      <ellipse cx="-5" cy="-60" rx="14" ry="18" fill="#F7D0B7"/>
+      <!-- Groom Hair & Beard -->
+      <path d="M-19,-68 C-18,-80 0,-82 9,-75 C-2,-75 -12,-65 -12,-55 Z" fill="#2C1D11"/>
+      <path d="M-19,-58 C-19,-50 -12,-42 -5,-42 C2,-42 9,-50 9,-58 C5,-47 -2,-47 -5,-47 C-10,-47 -17,-50 -19,-58 Z" fill="#2C1D11"/>
+
+      <!-- Royal Safa (Turban) -->
+      <path d="M-22,-68 C-22,-90 12,-90 12,-68 C12,-64 -22,-64 -22,-68 Z" fill="url(#roseGold)"/>
+      <path d="M-22,-74 C-10,-95 10,-88 12,-74 Z" fill="#FFF2DC" opacity="0.7"/>
+      <!-- Kalgi (Turban Brooch & Feather) -->
+      <path d="M-8,-88 Q-12,-108 0,-112 Q-4,-100 -2,-88 Z" fill="#FFFFFF"/>
+      <circle cx="-5" cy="-86" r="3.5" fill="url(#sherwaniGold)"/>
+      <circle cx="-5" cy="-86" r="1.5" fill="url(#lehengaMaroon)"/>
+
+      <!-- Groom Arm resting tenderly -->
+      <path d="M15,-15 C25,0 35,20 28,38" stroke="#F8F3E6" stroke-width="12" stroke-linecap="round" fill="none"/>
+      <!-- Groom Pearl Necklace (Mala) -->
+      <path d="M-20,-20 C-10,5 0,5 10,-20" stroke="url(#sherwaniGold)" stroke-width="1.8" fill="none" stroke-dasharray="2,2"/>
+    </g>
+
+    <!-- BRIDE (SONAL) - Right/Center side -->
+    <g id="bride" transform="translate(40, 5)">
+      <!-- Bridal Lehenga Skirt -->
+      <path d="M-20,40 L-45,125 C-45,130 35,130 35,125 L10,40 Z" fill="url(#lehengaMaroon)"/>
+      <!-- Gold Zari Embellishments on Lehenga -->
+      <path d="M-42,120 Q-5,115 32,120" stroke="url(#sherwaniGold)" stroke-width="4" fill="none"/>
+      <path d="M-36,105 Q-5,100 26,105" stroke="url(#sherwaniGold)" stroke-width="1.5" fill="none"/>
+      <path d="M-28,85 Q-5,80 18,85" stroke="url(#sherwaniGold)" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+
+      <!-- Blouse / Choli -->
+      <path d="M-18,-15 C-18,-25 0,-28 12,-25 L14,35 L-16,35 Z" fill="url(#lehengaMaroon)"/>
+      
+      <!-- Bridal Dupatta (Veil draped gracefully over head) -->
+      <path d="M-15,-65 C-25,-40 -35,20 -30,105 C-25,105 -20,105 -22,25 C-20,-10 -5,-45 8,-58 Z" fill="url(#roseGold)" opacity="0.85"/>
+      <path d="M-12,-65 C0,-85 22,-75 24,-55 C26,0 35,40 38,105 C33,105 28,105 25,35 C20,-20 15,-45 0,-55 Z" fill="url(#roseGold)" opacity="0.85"/>
+
+      <!-- Bride Head & Gentle Smile Profile -->
+      <ellipse cx="0" cy="-55" rx="12" ry="15" fill="#FCE2CE"/>
+      <!-- Bridal Bun & Hair -->
+      <circle cx="10" cy="-58" r="9" fill="#241408"/>
+      <!-- Maang Tikka & Matha Patti -->
+      <line x1="-3" y1="-70" x2="-3" y2="-60" stroke="url(#sherwaniGold)" stroke-width="1.5"/>
+      <circle cx="-3" cy="-60" r="2.5" fill="url(#sherwaniGold)"/>
+      <circle cx="-3" cy="-60" r="1" fill="url(#lehengaMaroon)"/>
+      <!-- Bridal Nath (Nose Ring) -->
+      <circle cx="-9" cy="-53" r="3" fill="none" stroke="url(#sherwaniGold)" stroke-width="0.8"/>
+      <line x1="-7" y1="-53" x2="3" y2="-57" stroke="url(#sherwaniGold)" stroke-width="0.5" stroke-dasharray="1,1"/>
+
+      <!-- Bridal Gold Choker Necklace & Jhumkas -->
+      <path d="M-8,-42 C-2,-37 4,-37 8,-42" stroke="url(#sherwaniGold)" stroke-width="3" fill="none"/>
+      <circle cx="6" cy="-48" r="2.5" fill="url(#sherwaniGold)"/>
+
+      <!-- Henna / Mehendi on Hands & Chooda (Red & White Bangles) -->
+      <g transform="translate(-15, 25)">
+        <!-- Red bangles -->
+        <rect x="0" y="0" width="12" height="6" rx="2" fill="#B23B4B"/>
+        <rect x="3" y="0" width="6" height="6" fill="#FDFBF7"/>
+        <!-- Henna adorned palm holding groom's hand / rose -->
+        <ellipse cx="14" cy="3" rx="4" ry="5" fill="#C2593F"/>
+      </g>
+    </g>
+
+    <!-- Rose Garland (Varmala) connecting them -->
+    <path d="M-30,-5 C-15,35 15,35 30,-5" stroke="url(#roseGold)" stroke-width="4.5" fill="none" stroke-dasharray="5,2"/>
+    <path d="M-30,-5 C-15,35 15,35 30,-5" stroke="#FFF7DC" stroke-width="1.5" fill="none" stroke-dasharray="2,5"/>
+  </g>
+
+  <!-- Drifting Rose Petals in Foreground -->
+  <g id="driftingPetals" opacity="0.75">
+    <path d="M110,380 C100,375 105,360 115,365 C125,370 120,385 110,380 Z" fill="url(#roseGold)"/>
+    <path d="M380,390 C370,385 375,370 385,375 C395,380 390,395 380,390 Z" fill="url(#roseGold)"/>
+    <path d="M220,440 C210,435 215,420 225,425 C235,430 230,445 220,440 Z" fill="url(#roseGold)"/>
+    <path d="M290,430 C280,425 285,410 295,415 C305,420 300,435 290,430 Z" fill="url(#roseGold)"/>
+  </g>
+
+  <!-- Bottom Gold Filigree Line -->
+  <path d="M150,470 L230,470 M270,470 L350,470" stroke="url(#sherwaniGold)" stroke-width="1"/>
+  <circle cx="250" cy="470" r="3" fill="url(#sherwaniGold)"/>
+  <circle cx="240" cy="470" r="1.5" fill="url(#sherwaniGold)"/>
+  <circle cx="260" cy="470" r="1.5" fill="url(#sherwaniGold)"/>
+</svg>

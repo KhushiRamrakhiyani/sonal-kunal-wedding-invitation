@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="divineWaterAura" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF9EA" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#FDF1D5" stop-opacity="0.6"/>
+      <stop offset="80%" stop-color="#E8F4F8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#DFEBF2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="jhulelalGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3CE"/>
+      <stop offset="40%" stop-color="#D4AF37"/>
+      <stop offset="85%" stop-color="#9C771B"/>
+      <stop offset="100%" stop-color="#674706"/>
+    </linearGradient>
+    <linearGradient id="sindhiChunriRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D63031"/>
+      <stop offset="60%" stop-color="#961B1C"/>
+      <stop offset="100%" stop-color="#5B0808"/>
+    </linearGradient>
+    <linearGradient id="waterFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#74B9FF" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#81ECEC" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#74B9FF" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="jyotGlow">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Light -->
+  <circle cx="250" cy="220" r="210" fill="url(#divineWaterAura)"/>
+
+  <!-- Water Waves Motif at Base (River Sindhu / Water blessings of Jhulelal Sai) -->
+  <g opacity="0.65">
+    <path d="M50,420 C100,405 150,435 200,420 C250,405 300,435 350,420 C400,405 450,435 500,420 L500,470 L0,470 L0,420 Z" fill="url(#waterFlow)"/>
+    <path d="M0,435 C50,420 100,450 150,435 C200,420 250,450 300,435 C350,420 400,450 450,435 L450,470 L0,470 Z" fill="#81ECEC" opacity="0.3"/>
+  </g>
+
+  <!-- Sacred Fish (Palla Machhi / Avatar of Varun Dev) Motif in Water -->
+  <g transform="translate(110, 440) scale(0.65)" fill="url(#jhulelalGold)" opacity="0.75">
+    <path d="M0,0 C25,-12 50,-8 70,0 C50,8 25,12 0,0 Z"/>
+    <polygon points="70,0 85,-10 80,0 85,10"/>
+    <circle cx="15" cy="-2" r="2" fill="#583500"/>
+  </g>
+  <g transform="translate(350, 442) scale(-0.65, 0.65)" fill="url(#jhulelalGold)" opacity="0.75">
+    <path d="M0,0 C25,-12 50,-8 70,0 C50,8 25,12 0,0 Z"/>
+    <polygon points="70,0 85,-10 80,0 85,10"/>
+    <circle cx="15" cy="-2" r="2" fill="#583500"/>
+  </g>
+
+  <!-- Devotional Sindhi Archway / Canopy Frame -->
+  <path d="M120,380 L120,170 C120,90 200,60 250,40 C300,60 380,90 380,170 L380,380" 
+        fill="none" stroke="url(#jhulelalGold)" stroke-width="2" stroke-dasharray="5,4" opacity="0.7"/>
+  <path d="M135,380 L135,175 C135,105 205,80 250,60 C295,80 365,105 365,175 L365,380" 
+        fill="none" stroke="url(#sindhiChunriRed)" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Jai Jhulelal Sacred Crown & Lotus Crest at Top -->
+  <g transform="translate(250, 80)">
+    <!-- Golden Lotus -->
+    <path d="M-25,10 C-18,-10 0,-18 0,-5 C0,-18 18,-10 25,10 C15,18 -15,18 -25,10 Z" fill="#FFEAA7"/>
+    <path d="M-15,10 C-10,-5 0,-12 0,-3 C0,-12 10,-5 15,10 Z" fill="url(#jhulelalGold)"/>
+    <circle cx="0" cy="-20" r="3" fill="url(#jhulelalGold)"/>
+  </g>
+
+  <!-- The Sacred Behrana Sahib Thal (The Divine Holy Platter) -->
+  <g id="behranaThal" transform="translate(250, 260)">
+    <!-- Ornate Brass / Bronze Thali (Kansa Thal) -->
+    <ellipse cx="0" cy="70" rx="140" ry="32" fill="url(#jhulelalGold)"/>
+    <ellipse cx="0" cy="67" rx="130" ry="28" fill="#FFF2CE"/>
+    <ellipse cx="0" cy="65" rx="120" ry="24" fill="url(#sindhiChunriRed)"/>
+    <ellipse cx="0" cy="63" rx="112" ry="21" fill="#FDF7EA"/>
+
+    <!-- Sacred Atta Kneaded Dough Behrana Base (Conical Mound) -->
+    <path d="M-60,55 C-55,20 -35,-20 0,-35 C35,-20 55,20 60,55 Z" fill="#F5DFB3" stroke="#D1BE8C" stroke-width="1.5"/>
+
+    <!-- Sindhi Chunri / Red Fabric draped around the base with golden dots -->
+    <path d="M-62,56 C-40,65 40,65 62,56 C55,42 -55,42 -62,56 Z" fill="url(#sindhiChunriRed)"/>
+    <g fill="#FFEAA7" opacity="0.8">
+      <circle cx="-45" cy="54" r="1.5"/>
+      <circle cx="-25" cy="57" r="1.5"/>
+      <circle cx="0" cy="58" r="1.5"/>
+      <circle cx="25" cy="57" r="1.5"/>
+      <circle cx="45" cy="54" r="1.5"/>
+    </g>
+
+    <!-- Devotional Cloves (Laung) & Cardamom (Elaichi) Patterns embedded in Behrana -->
+    <g fill="#4A2810">
+      <!-- Flower shaped arrangement of cloves -->
+      <circle cx="0" cy="15" r="2.5"/>
+      <line x1="-5" y1="10" x2="-2" y2="13" stroke="#4A2810" stroke-width="2"/>
+      <line x1="5" y1="10" x2="2" y2="13" stroke="#4A2810" stroke-width="2"/>
+      <line x1="-7" y1="18" x2="-3" y2="16" stroke="#4A2810" stroke-width="2"/>
+      <line x1="7" y1="18" x2="3" y2="16" stroke="#4A2810" stroke-width="2"/>
+      <line x1="0" y1="22" x2="0" y2="18" stroke="#4A2810" stroke-width="2"/>
+
+      <!-- Cardamom (Elaichi) pods around -->
+      <ellipse cx="-25" cy="20" rx="3" ry="5" transform="rotate(-30, -25, 20)" fill="#7BA05B"/>
+      <ellipse cx="25" cy="20" rx="3" ry="5" transform="rotate(30, 25, 20)" fill="#7BA05B"/>
+      <ellipse cx="-18" cy="36" rx="3" ry="5" transform="rotate(-60, -18, 36)" fill="#7BA05B"/>
+      <ellipse cx="18" cy="36" rx="3" ry="5" transform="rotate(60, 18, 36)" fill="#7BA05B"/>
+    </g>
+
+    <!-- Misri (Sugar crystals) & Akho (Rice & Sugar grains) in Thali -->
+    <g fill="#FFFFFF" opacity="0.9">
+      <circle cx="-80" cy="62" r="2"/>
+      <circle cx="-72" cy="60" r="2.5"/>
+      <circle cx="-65" cy="64" r="1.8"/>
+      <circle cx="-88" cy="65" r="2.2"/>
+      <circle cx="80" cy="62" r="2"/>
+      <circle cx="72" cy="60" r="2.5"/>
+      <circle cx="65" cy="64" r="1.8"/>
+      <circle cx="88" cy="65" r="2.2"/>
+    </g>
+
+    <!-- Marigold Flowers & Red Rose Petals in Thali -->
+    <g fill="#FFA502">
+      <circle cx="-95" cy="66" r="6"/>
+      <circle cx="95" cy="66" r="6"/>
+      <circle cx="-40" cy="68" r="5.5"/>
+      <circle cx="40" cy="68" r="5.5"/>
+    </g>
+    <g fill="#D63031">
+      <circle cx="-110" cy="68" r="5"/>
+      <circle cx="110" cy="68" r="5"/>
+      <circle cx="0" cy="70" r="6"/>
+    </g>
+
+    <!-- The Holy Jyot (The Divine Akhand Flame of Jhulelal Sai on top) -->
+    <g transform="translate(0, -35)">
+      <!-- Pure Ghee Cup Base -->
+      <ellipse cx="0" cy="2" rx="12" ry="4" fill="url(#jhulelalGold)"/>
+      
+      <!-- Luminous Jyot Flame -->
+      <g filter="url(#jyotGlow)">
+        <!-- Outer Golden Halo -->
+        <circle cx="0" cy="-22" r="30" fill="#FFF2B2" opacity="0.35"/>
+        <path d="M-10,0 C-14,-20 -5,-35 0,-50 C5,-35 14,-20 10,0 Z" fill="#FF7675"/>
+        <path d="M-6,0 C-8,-16 -3,-28 0,-40 C3,-28 8,-16 6,0 Z" fill="#FEEAA7"/>
+        <circle cx="0" cy="-10" r="4" fill="#FFFFFF"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Hanging Brass Bells (Ghanti) on Sides -->
+  <g transform="translate(100, 160)">
+    <line x1="0" y1="-40" x2="0" y2="0" stroke="url(#jhulelalGold)" stroke-width="1.5"/>
+    <path d="M-12,20 C-12,5 -5,0 0,0 C5,0 12,5 12,20 Z" fill="url(#jhulelalGold)"/>
+    <circle cx="0" cy="22" r="3" fill="url(#jhulelalGold)"/>
+  </g>
+  <g transform="translate(400, 160)">
+    <line x1="0" y1="-40" x2="0" y2="0" stroke="url(#jhulelalGold)" stroke-width="1.5"/>
+    <path d="M-12,20 C-12,5 -5,0 0,0 C5,0 12,5 12,20 Z" fill="url(#jhulelalGold)"/>
+    <circle cx="0" cy="22" r="3" fill="url(#jhulelalGold)"/>
+  </g>
+
+  <!-- Sacred Water Ripple Motifs at Sides -->
+  <path d="M80,360 Q120,350 160,360" stroke="#74B9FF" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M340,360 Q380,350 420,360" stroke="#74B9FF" stroke-width="1.5" fill="none" opacity="0.5"/>
+</svg>

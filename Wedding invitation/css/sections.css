@@ -1,0 +1,340 @@
+/* Custom Color Themes and Unique Styling for All 10 Sections */
+
+/* SECTION 1 — WELCOME SCREEN */
+#section-welcome {
+  text-align: center;
+  background: radial-gradient(circle at 50% 30%, #FFFDF9 0%, #FAF3E6 100%);
+  border: 1.5px solid rgba(197, 155, 75, 0.45);
+  box-shadow: 0 20px 50px rgba(197, 155, 75, 0.2);
+  padding: 3rem 1.75rem 2.75rem;
+}
+
+.welcome-ganesh-wrap {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 0.75rem;
+}
+
+.welcome-ganesh-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(197, 155, 75, 0.3));
+}
+
+.welcome-title-main {
+  font-family: var(--font-serif-luxury);
+  font-size: clamp(2rem, 5.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-gold-dark);
+  margin: 0.85rem 0 0.5rem;
+  line-height: 1.2;
+}
+
+.welcome-date-badge {
+  display: inline-block;
+  font-family: var(--font-sans-clean);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-crimson-royal);
+  padding: 0.4rem 1.25rem;
+  background: rgba(239, 175, 163, 0.2);
+  border: 1px solid rgba(128, 28, 43, 0.25);
+  border-radius: 20px;
+  margin-top: 0.5rem;
+}
+
+/* SECTION 2 — WEDDING INVITATION & FAMILY BLESSINGS */
+#section-invitation {
+  text-align: center;
+  background: linear-gradient(180deg, #FFFDF9 0%, #FCF8F2 100%);
+}
+
+.blessings-card {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-left: 2px solid var(--color-gold-primary);
+  border-right: 2px solid var(--color-gold-primary);
+  border-radius: 8px;
+}
+
+.blessings-intro {
+  font-family: var(--font-serif-luxury);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-gold-antique);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.grandparents-names {
+  font-family: var(--font-serif-body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+}
+
+.grandparents-and {
+  font-style: italic;
+  color: var(--color-gold-primary);
+  margin: 0.25rem 0;
+}
+
+.invitation-body-text {
+  font-family: var(--font-serif-body);
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 420px;
+  margin: 1rem auto 1.5rem;
+}
+
+/* SECTION 3 — GURU GHAR & MEHENDI */
+#section-guru-ghar {
+  background: linear-gradient(180deg, #FBF8EE 0%, #F5F9F4 100%);
+  border-color: rgba(118, 150, 120, 0.4);
+}
+
+.dual-event-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.sub-event-card {
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  border: 1px solid rgba(197, 155, 75, 0.3);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.sub-event-card:hover {
+  transform: translateY(-2px);
+}
+
+.sub-event-badge {
+  display: inline-block;
+  font-family: var(--font-sans-clean);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2D5A27;
+  background: rgba(45, 90, 39, 0.1);
+  padding: 3px 12px;
+  border-radius: 12px;
+  margin-bottom: 0.4rem;
+}
+
+.sub-event-title {
+  font-family: var(--font-serif-luxury);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-gold-dark);
+  margin-bottom: 0.25rem;
+}
+
+.sub-event-time {
+  font-family: var(--font-sans-clean);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-crimson-royal);
+  margin-bottom: 0.5rem;
+}
+
+.ceremonial-quote {
+  font-family: var(--font-serif-body);
+  font-style: italic;
+  font-size: 1.12rem;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+}
+
+/* SECTION 4 — SACRED THREAD CEREMONY */
+#section-sacred-thread {
+  background: linear-gradient(180deg, #FFF9F2 0%, #FCF1E6 100%);
+  border-color: rgba(225, 112, 85, 0.35);
+}
+
+.sons-highlight {
+  font-family: var(--font-serif-luxury);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-gold-dark);
+  margin: 0.85rem 0;
+  text-align: center;
+}
+
+/* SECTION 5 — BEHRANA SAHIB */
+#section-behrana-sahib {
+  background: linear-gradient(180deg, #FAF4E8 0%, #F5ECDD 100%);
+  border-color: rgba(197, 155, 75, 0.4);
+}
+
+/* SECTION 6 — CARNIVAL */
+#section-carnival {
+  background: linear-gradient(180deg, #FFF9FA 0%, #FFF3EC 50%, #F4FAF5 100%);
+  border-color: rgba(255, 159, 243, 0.4);
+}
+
+.carnival-heading {
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  color: #D63031;
+  letter-spacing: 0.06em;
+}
+
+.carnival-subheading {
+  font-family: var(--font-serif-luxury);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #E67E22;
+  margin: 0.35rem 0;
+}
+
+/* SECTION 7 — ENGAGEMENT & SANGEET NIGHT */
+#section-sangeet {
+  background: radial-gradient(circle at 50% 20%, #20133A 0%, #110920 100%);
+  color: #F8F5EE;
+  border-color: rgba(228, 191, 116, 0.5);
+  box-shadow: 0 20px 50px rgba(17, 9, 32, 0.4);
+}
+
+#section-sangeet h2, 
+#section-sangeet h3, 
+#section-sangeet .meta-event-title,
+#section-sangeet .meta-date,
+#section-sangeet .meta-venue-name {
+  color: #FFF2CA;
+}
+
+#section-sangeet .subtitle-verse,
+#section-sangeet .meta-venue-address,
+#section-sangeet .meta-time {
+  color: #DCD0E8;
+}
+
+#section-sangeet .event-meta-block {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(228, 191, 116, 0.3);
+}
+
+#section-sangeet .btn-action-gold {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFF2CA;
+  border-color: rgba(228, 191, 116, 0.5);
+}
+
+#section-sangeet .btn-action-gold:hover {
+  background: var(--gradient-gold);
+  color: #20133A;
+}
+
+/* SECTION 8 — THE WEDDING CEREMONY */
+#section-wedding {
+  background: radial-gradient(circle at 50% 30%, #FFFDF8 0%, #FDF4E7 100%);
+  border: 2px solid rgba(197, 155, 75, 0.55);
+  box-shadow: 0 25px 60px rgba(128, 28, 43, 0.15), 0 0 35px rgba(228, 191, 116, 0.25);
+  position: relative;
+}
+
+.wedding-crown-badge {
+  font-family: var(--font-sans-clean);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-crimson-royal);
+  background: rgba(128, 28, 43, 0.08);
+  padding: 4px 14px;
+  border-radius: 16px;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(128, 28, 43, 0.2);
+}
+
+/* SECTION 9 — THE RECEPTION */
+#section-reception {
+  background: linear-gradient(180deg, #18222C 0%, #0D141C 100%);
+  color: #F8F9FA;
+  border-color: rgba(234, 210, 146, 0.45);
+}
+
+#section-reception h2, 
+#section-reception .meta-event-title,
+#section-reception .meta-date,
+#section-reception .meta-venue-name {
+  color: #FFF9E6;
+}
+
+#section-reception .subtitle-verse,
+#section-reception .meta-venue-address,
+#section-reception .meta-time {
+  color: #CCD6E0;
+}
+
+#section-reception .event-meta-block {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(234, 210, 146, 0.3);
+}
+
+#section-reception .btn-action-gold {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFF9E6;
+  border-color: rgba(234, 210, 146, 0.45);
+}
+
+#section-reception .btn-action-gold:hover {
+  background: var(--gradient-gold);
+  color: #0D141C;
+}
+
+/* SECTION 10 — SPECIAL INVITATION WITH LOVE */
+#section-family {
+  text-align: center;
+  background: linear-gradient(180deg, #FFFDF9 0%, #FCF5EC 100%);
+  border-color: rgba(197, 155, 75, 0.45);
+}
+
+.family-tribute-box {
+  margin: 1.5rem 0 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 18px;
+  border: 1px solid rgba(197, 155, 75, 0.3);
+}
+
+.yuvraj-shivangi-signoff {
+  font-family: var(--font-serif-luxury);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-crimson-royal);
+  margin-top: 0.35rem;
+}
+
+.compliments-families {
+  font-family: var(--font-serif-body);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-gold-dark);
+  margin-top: 0.5rem;
+  line-height: 1.45;
+}
+
+.final-thankyou-message {
+  font-family: var(--font-serif-body);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  margin-top: 1.5rem;
+}

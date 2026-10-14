@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="familyWarmGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF8EE" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#FDF1DF" stop-opacity="0.6"/>
+      <stop offset="85%" stop-color="#FCE4EC" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FAF5EF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gratitudeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2CE"/>
+      <stop offset="40%" stop-color="#D4AF37"/>
+      <stop offset="85%" stop-color="#9C771B"/>
+      <stop offset="100%" stop-color="#674706"/>
+    </linearGradient>
+    <linearGradient id="gratitudeRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE8EA"/>
+      <stop offset="50%" stop-color="#EAA6B1"/>
+      <stop offset="100%" stop-color="#C26A7A"/>
+    </linearGradient>
+    <linearGradient id="sageLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9DB59B"/>
+      <stop offset="100%" stop-color="#6A8568"/>
+    </linearGradient>
+    <filter id="namasteGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Light -->
+  <circle cx="250" cy="240" r="220" fill="url(#familyWarmGlow)"/>
+
+  <!-- Ornate Heart-Shaped Botanical Garland Wreath Framing the Scene -->
+  <g id="floralHeartWreath" transform="translate(250, 235)" filter="url(#namasteGlow)">
+    <!-- Heart outline path -->
+    <path d="M0,165 
+             C-30,125 -170,40 -170,-60 
+             C-170,-130 -105,-175 -35,-150 
+             C-15,-142 0,-125 0,-120 
+             C0,-125 15,-142 35,-150 
+             C105,-175 170,-130 170,-60 
+             C170,40 30,125 0,165 Z" 
+          fill="none" stroke="url(#gratitudeGold)" stroke-width="1.8" stroke-dasharray="6,4" opacity="0.6"/>
+
+    <!-- Watercolor Roses & Flowers along the Wreath -->
+    <!-- Top Left Cluster -->
+    <circle cx="-50" cy="-145" r="9" fill="url(#gratitudeRose)"/>
+    <circle cx="-35" cy="-155" r="7" fill="#FFF0F2"/>
+    <circle cx="-70" cy="-135" r="8" fill="#FDCB6E"/>
+    <!-- Leaves -->
+    <path d="M-60,-155 C-70,-165 -65,-175 -55,-165 Z" fill="url(#sageLeaf)"/>
+    
+    <!-- Top Right Cluster -->
+    <circle cx="50" cy="-145" r="9" fill="url(#gratitudeRose)"/>
+    <circle cx="35" cy="-155" r="7" fill="#FFF0F2"/>
+    <circle cx="70" cy="-135" r="8" fill="#FDCB6E"/>
+    <path d="M60,-155 C70,-165 65,-175 55,-165 Z" fill="url(#sageLeaf)"/>
+
+    <!-- Bottom Tip Flower Cluster -->
+    <circle cx="0" cy="165" r="10" fill="url(#gratitudeRose)"/>
+    <circle cx="-16" cy="155" r="7" fill="#FDCB6E"/>
+    <circle cx="16" cy="155" r="7" fill="#FDCB6E"/>
+    <circle cx="0" cy="165" r="4" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Auspicious Folded Hands (Namaste / Pranam 🙏) of Blessing & Gratitude at Top -->
+  <g id="namasteBlessing" transform="translate(250, 110)">
+    <!-- Golden Halo Ring -->
+    <circle cx="0" cy="0" r="28" fill="none" stroke="url(#gratitudeGold)" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7"/>
+    <!-- Folded Anjali Mudra Hands -->
+    <path d="M-6,14 C-10,8 -14,-4 -12,-16 C-10,-24 -3,-26 0,-28 C3,-26 10,-24 12,-16 C14,-4 10,8 6,14 Z" fill="url(#gratitudeGold)"/>
+    <line x1="0" y1="-28" x2="0" y2="14" stroke="#FFF7DC" stroke-width="1.5"/>
+    <!-- Sacred Tilak / Lotus at the tips of hands -->
+    <polygon points="0,-34 3,-28 0,-24 -3,-28" fill="#D63031"/>
+    <!-- Radiance sparkles -->
+    <circle cx="-18" cy="-12" r="1.5" fill="url(#gratitudeGold)"/>
+    <circle cx="18" cy="-12" r="1.5" fill="url(#gratitudeGold)"/>
+    <circle cx="0" cy="-40" r="2" fill="url(#gratitudeGold)"/>
+  </g>
+
+  <!-- Warm Illustration: Loving Couple Framed in Family Harmony -->
+  <g id="familyEmbrace" transform="translate(250, 280)">
+    <!-- Soft shadow -->
+    <ellipse cx="0" cy="100" rx="85" ry="12" fill="#5A4A3E" opacity="0.12"/>
+
+    <!-- KUNAL & SONAL In Harmonious Festive Outfits -->
+    <!-- Kunal (Groom) - Left -->
+    <g transform="translate(-36, -10)">
+      <!-- Ivory & Gold Silk Kurta -->
+      <path d="M-22,35 L-24,98 L-8,98 L-6,35 Z" fill="#FDFBF7"/>
+      <path d="M-4,35 L-2,98 L14,98 L10,35 Z" fill="#FDFBF7"/>
+      <path d="M-25,-18 C-25,-26 -6,-30 0,-30 C8,-30 20,-24 20,-18 L18,38 L-22,38 Z" fill="#FDFBF7"/>
+      <line x1="-1" y1="-30" x2="-1" y2="38" stroke="url(#gratitudeGold)" stroke-width="1.8"/>
+      <!-- Soft Rose Stole / Dupatta -->
+      <path d="M-28,-15 C-36,5 -30,45 -26,85 C-22,85 -18,85 -20,80 C-24,45 -24,5 -18,-15 Z" fill="url(#gratitudeRose)"/>
+
+      <!-- Kunal Head & Warm Grateful Smile -->
+      <ellipse cx="-2" cy="-48" rx="12" ry="15" fill="#F7D0B7"/>
+      <path d="M-14,-55 C-13,-66 3,-64 10,-58 C1,-58 -6,-52 -6,-44 Z" fill="#24180F"/>
+      <!-- Trimmed Beard -->
+      <path d="M-13,-46 C-13,-39 -7,-33 0,-33 C6,-33 11,-39 11,-46 C7,-37 0,-37 -2,-37 C-6,-37 -11,-39 -13,-46 Z" fill="#24180F"/>
+      
+      <!-- Right Arm Embracing Bride -->
+      <path d="M16,-10 C28,-2 34,14 30,25" stroke="#FDFBF7" stroke-width="8" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <!-- Sonal (Bride) - Right -->
+    <g transform="translate(36, -5)">
+      <!-- Elegant Dusty Rose & Gold Anarkali / Lehenga -->
+      <path d="M-16,30 C-22,55 -38,80 -48,98 C-48,102 38,102 38,98 C28,80 18,55 14,30 Z" fill="url(#gratitudeRose)"/>
+      <path d="M-45,95 Q-5,90 35,95" stroke="url(#gratitudeGold)" stroke-width="3" fill="none"/>
+
+      <!-- Fitted Embroidered Top -->
+      <path d="M-14,-15 C-14,-25 0,-26 10,-24 L12,32 L-14,32 Z" fill="url(#gratitudeRose)"/>
+
+      <!-- Sonal Head & Gentle Loving Smile -->
+      <ellipse cx="0" cy="-46" rx="11" ry="14" fill="#FCE2CE"/>
+      <path d="M-10,-52 C-8,-64 8,-62 12,-52 C14,-42 16,-20 14,10 Z" fill="#24180F"/>
+      
+      <!-- Delicate Maang Tikka & Jhumkis -->
+      <line x1="-1" y1="-58" x2="-1" y2="-50" stroke="url(#gratitudeGold)" stroke-width="1.2"/>
+      <circle cx="-1" cy="-50" r="2" fill="url(#gratitudeGold)"/>
+      <circle cx="8" cy="-42" r="2" fill="url(#gratitudeGold)"/>
+
+      <!-- Left Hand Tenderly Resting on Kunal's Arm -->
+      <path d="M-14,-8 C-24,-2 -28,8 -24,18" stroke="#FCE2CE" stroke-width="6" stroke-linecap="round" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Floating Golden Hearts & Blessings Sparkles -->
+  <g fill="url(#gratitudeGold)" opacity="0.85">
+    <!-- Heart 1 -->
+    <path d="M120,380 C116,370 106,370 104,376 C102,382 110,390 120,396 C130,390 138,382 136,376 C134,370 124,370 120,380 Z"/>
+    <!-- Heart 2 -->
+    <path d="M380,380 C376,370 366,370 364,376 C362,382 370,390 380,396 C390,390 398,382 396,376 C394,370 384,370 380,380 Z"/>
+    
+    <!-- Sparkles -->
+    <polygon points="150,200 152,194 158,192 152,190 150,184 148,190 142,192 148,194"/>
+    <polygon points="350,200 352,194 358,192 352,190 350,184 348,190 342,192 348,194"/>
+  </g>
+
+  <!-- Ornate Calligraphic Ribbon Divider at Bottom -->
+  <g transform="translate(250, 445)">
+    <line x1="-120" y1="0" x2="-30" y2="0" stroke="url(#gratitudeGold)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="4" fill="url(#gratitudeGold)"/>
+    <circle cx="-12" cy="0" r="2" fill="url(#gratitudeGold)"/>
+    <circle cx="12" cy="0" r="2" fill="url(#gratitudeGold)"/>
+    <line x1="30" y1="0" x2="120" y2="0" stroke="url(#gratitudeGold)" stroke-width="1"/>
+  </g>
+</svg>

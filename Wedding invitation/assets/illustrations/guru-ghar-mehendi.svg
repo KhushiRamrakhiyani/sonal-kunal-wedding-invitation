@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="divineLightGuru" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#FFF8E0" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#FAF1D6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#EBE3CA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="guruGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE79A"/>
+      <stop offset="40%" stop-color="#DEB04A"/>
+      <stop offset="100%" stop-color="#9A7016"/>
+    </linearGradient>
+    <linearGradient id="mehendiHenna" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F7942"/>
+      <stop offset="50%" stop-color="#2D5A27"/>
+      <stop offset="100%" stop-color="#1B3817"/>
+    </linearGradient>
+    <linearGradient id="marigoldWarm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFA502"/>
+      <stop offset="100%" stop-color="#E17055"/>
+    </linearGradient>
+    <linearGradient id="brassLamp" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFE599"/>
+      <stop offset="50%" stop-color="#CC9933"/>
+      <stop offset="100%" stop-color="#996600"/>
+    </linearGradient>
+    <filter id="softGlow2">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Light -->
+  <circle cx="250" cy="220" r="220" fill="url(#divineLightGuru)"/>
+
+  <!-- Top Sacred Section: Guru Ghar Blessings -->
+  <!-- Golden Gurdwara Dome Silhouette with Ek Onkar / Khanda symbol in gold -->
+  <g id="guruGharDome" transform="translate(250, 95)">
+    <!-- Central Dome -->
+    <path d="M-60,50 C-60,0 -30,-35 0,-45 C30,-35 60,0 60,50 Z" fill="url(#guruGold)" opacity="0.85"/>
+    <!-- Dome Finial / Kalash -->
+    <line x1="0" y1="-45" x2="0" y2="-65" stroke="url(#guruGold)" stroke-width="2.5"/>
+    <circle cx="0" cy="-55" r="4" fill="url(#guruGold)"/>
+    <polygon points="0,-72 -5,-65 5,-65" fill="url(#guruGold)"/>
+    
+    <!-- Sacred Ek Onkar Motif (ੴ) Radiating in Center -->
+    <g transform="translate(0, 15) scale(0.9)" filter="url(#softGlow2)">
+      <circle cx="0" cy="0" r="24" fill="#FFFFFF" opacity="0.9"/>
+      <text x="0" y="8" text-anchor="middle" font-family="'Noto Sans Gurmukhi', 'Gurmukhi MN', serif" font-size="22" font-weight="bold" fill="url(#guruGold)">
+        ੴ
+      </text>
+    </g>
+
+    <!-- Side Mini Domes / Chattris -->
+    <path d="M-90,50 C-90,20 -75,0 -60,0 L-60,50 Z" fill="url(#guruGold)" opacity="0.6"/>
+    <path d="M90,50 C90,20 75,0 60,0 L60,50 Z" fill="url(#guruGold)" opacity="0.6"/>
+  </g>
+
+  <!-- Traditional Residence Decorated Entrance (Toran, Archway) -->
+  <g id="decoratedEntrance" transform="translate(250, 220)">
+    <!-- Traditional Floral Toran across Top -->
+    <path d="M-190,-70 Q0,-40 190,-70" stroke="url(#marigoldWarm)" stroke-width="3" fill="none"/>
+    <!-- Hanging Mango Leaves (Bandhanwar) -->
+    <g fill="url(#mehendiHenna)">
+      <path d="M-150,-65 C-155,-40 -145,-40 -150,-65" stroke="url(#mehendiHenna)" stroke-width="4"/>
+      <path d="M-100,-58 C-105,-33 -95,-33 -100,-58" stroke="url(#mehendiHenna)" stroke-width="4"/>
+      <path d="M-50,-53 C-55,-28 -45,-28 -50,-53" stroke="url(#mehendiHenna)" stroke-width="4"/>
+      <path d="M0,-50 C-5,-25 5,-25 0,-50" stroke="url(#mehendiHenna)" stroke-width="4"/>
+      <path d="M50,-53 C45,-28 55,-28 50,-53" stroke="url(#mehendiHenna)" stroke-width="4"/>
+      <path d="M100,-58 C95,-33 105,-33 100,-58" stroke="url(#mehendiHenna)" stroke-width="4"/>
+      <path d="M150,-65 C145,-40 155,-40 150,-65" stroke="url(#mehendiHenna)" stroke-width="4"/>
+    </g>
+    <!-- Marigold Flowers along Toran -->
+    <g fill="url(#marigoldWarm)">
+      <circle cx="-170" cy="-68" r="6"/>
+      <circle cx="-130" cy="-62" r="6"/>
+      <circle cx="-90" cy="-57" r="6"/>
+      <circle cx="-50" cy="-53" r="6"/>
+      <circle cx="-10" cy="-50" r="6"/>
+      <circle cx="30" cy="-51" r="6"/>
+      <circle cx="70" cy="-55" r="6"/>
+      <circle cx="110" cy="-60" r="6"/>
+      <circle cx="150" cy="-65" r="6"/>
+      <circle cx="170" cy="-68" r="6"/>
+    </g>
+
+    <!-- Glowing Brass Samai / Diya (Left) -->
+    <g transform="translate(-140, 60)">
+      <!-- Brass Base -->
+      <path d="M-16,40 L16,40 L8,20 L-8,20 Z" fill="url(#brassLamp)"/>
+      <line x1="0" y1="20" x2="0" y2="-10" stroke="url(#brassLamp)" stroke-width="3"/>
+      <!-- Oil bowl -->
+      <ellipse cx="0" cy="-10" rx="14" ry="5" fill="url(#brassLamp)"/>
+      <!-- Diya Flame -->
+      <path d="M-4,-12 Q0,-26 0,-28 Q0,-26 4,-12 Z" fill="#FF7675" filter="url(#softGlow2)"/>
+      <path d="M-2,-12 Q0,-22 0,-24 Q0,-22 2,-12 Z" fill="#FFEAA7"/>
+      <!-- Aura -->
+      <circle cx="0" cy="-20" r="16" fill="#FCEFD2" opacity="0.35"/>
+    </g>
+
+    <!-- Glowing Brass Samai / Diya (Right) -->
+    <g transform="translate(140, 60)">
+      <path d="M-16,40 L16,40 L8,20 L-8,20 Z" fill="url(#brassLamp)"/>
+      <line x1="0" y1="20" x2="0" y2="-10" stroke="url(#brassLamp)" stroke-width="3"/>
+      <ellipse cx="0" cy="-10" rx="14" ry="5" fill="url(#brassLamp)"/>
+      <path d="M-4,-12 Q0,-26 0,-28 Q0,-26 4,-12 Z" fill="#FF7675" filter="url(#softGlow2)"/>
+      <path d="M-2,-12 Q0,-22 0,-24 Q0,-22 2,-12 Z" fill="#FFEAA7"/>
+      <circle cx="0" cy="-20" r="16" fill="#FCEFD2" opacity="0.35"/>
+    </g>
+
+    <!-- Center Stage: Intricate Mehendi Mandala & Festive Floral Urli Bowl -->
+    <g transform="translate(0, 110)">
+      <!-- Brass Urli Bowl filled with water & floating marigolds -->
+      <ellipse cx="0" cy="50" rx="65" ry="20" fill="url(#brassLamp)"/>
+      <ellipse cx="0" cy="46" rx="58" ry="16" fill="#2D5A27" opacity="0.6"/>
+      <!-- Floating flower heads in Urli -->
+      <circle cx="-30" cy="46" r="8" fill="url(#marigoldWarm)"/>
+      <circle cx="-10" cy="48" r="9" fill="#FFD32A"/>
+      <circle cx="12" cy="45" r="9" fill="url(#marigoldWarm)"/>
+      <circle cx="32" cy="47" r="7" fill="#FF6B81"/>
+      <circle cx="0" cy="42" r="6" fill="#FFFFFF"/>
+      <circle cx="0" cy="42" r="3" fill="#FFD32A"/>
+
+      <!-- Festive Mehendi Pattern (Mandala of Henna Art) -->
+      <g transform="translate(0, -20) scale(0.85)" stroke="url(#mehendiHenna)" fill="none" opacity="0.85">
+        <circle cx="0" cy="0" r="45" stroke-width="1.5"/>
+        <circle cx="0" cy="0" r="36" stroke-width="1" stroke-dasharray="3,3"/>
+        <circle cx="0" cy="0" r="22" stroke-width="1.5"/>
+        <circle cx="0" cy="0" r="8" fill="url(#mehendiHenna)"/>
+        <!-- Henna Petals -->
+        <g stroke-width="1.2">
+          <path d="M0,-22 C-8,-32 8,-32 0,-22 Z" fill="url(#mehendiHenna)" fill-opacity="0.2"/>
+          <path d="M0,22 C-8,32 8,32 0,22 Z" fill="url(#mehendiHenna)" fill-opacity="0.2"/>
+          <path d="M-22,0 C-32,-8 -32,8 -22,0 Z" fill="url(#mehendiHenna)" fill-opacity="0.2"/>
+          <path d="M22,0 C32,-8 32,8 22,0 Z" fill="url(#mehendiHenna)" fill-opacity="0.2"/>
+          <path d="M-15,-15 C-22,-22 -22,-10 -15,-15 Z" fill="url(#mehendiHenna)" fill-opacity="0.2"/>
+          <path d="M15,-15 C22,-22 22,-10 15,-15 Z" fill="url(#mehendiHenna)" fill-opacity="0.2"/>
+          <path d="M-15,15 C-22,22 -22,10 -15,15 Z" fill="url(#mehendiHenna)" fill-opacity="0.2"/>
+          <path d="M15,15 C22,22 22,10 15,15 Z" fill="url(#mehendiHenna)" fill-opacity="0.2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Festive Floral Drops & Marigold Garlands Frame -->
+  <g opacity="0.8">
+    <line x1="50" y1="0" x2="50" y2="280" stroke="url(#marigoldWarm)" stroke-width="2" stroke-dasharray="6,4"/>
+    <circle cx="50" cy="70" r="6" fill="url(#marigoldWarm)"/>
+    <circle cx="50" cy="140" r="6" fill="#FFD32A"/>
+    <circle cx="50" cy="210" r="6" fill="url(#marigoldWarm)"/>
+    <circle cx="50" cy="280" r="8" fill="#FF7675"/>
+
+    <line x1="450" y1="0" x2="450" y2="280" stroke="url(#marigoldWarm)" stroke-width="2" stroke-dasharray="6,4"/>
+    <circle cx="450" cy="70" r="6" fill="url(#marigoldWarm)"/>
+    <circle cx="450" cy="140" r="6" fill="#FFD32A"/>
+    <circle cx="450" cy="210" r="6" fill="url(#marigoldWarm)"/>
+    <circle cx="450" cy="280" r="8" fill="#FF7675"/>
+  </g>
+</svg>

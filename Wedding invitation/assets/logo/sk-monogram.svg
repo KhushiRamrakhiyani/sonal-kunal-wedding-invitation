@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Luxury Gold Gradients -->
+    <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF2C7" />
+      <stop offset="25%" stop-color="#E4BF74" />
+      <stop offset="50%" stop-color="#C59B4B" />
+      <stop offset="75%" stop-color="#F7E2A9" />
+      <stop offset="100%" stop-color="#9C712B" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="20%" stop-color="#ECC67C" />
+      <stop offset="60%" stop-color="#B38634" />
+      <stop offset="100%" stop-color="#6F4E18" />
+    </linearGradient>
+
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDF4D4" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#ECC67C" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#C59B4B" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="royalShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#583A0E" flood-opacity="0.25" />
+    </filter>
+
+    <filter id="goldShine" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Golden Halo -->
+  <circle cx="250" cy="250" r="230" fill="url(#goldGlow)" />
+
+  <!-- Outer Filigree Border -->
+  <circle cx="250" cy="250" r="225" fill="none" stroke="url(#goldGrad1)" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7" />
+  <circle cx="250" cy="250" r="218" fill="none" stroke="url(#goldGrad1)" stroke-width="2.5" />
+  <circle cx="250" cy="250" r="211" fill="none" stroke="url(#goldGrad1)" stroke-width="1" opacity="0.6" />
+
+  <!-- 4 Cardinal Decorative Flourishes -->
+  <!-- Top Motif -->
+  <g transform="translate(250, 34)" filter="url(#royalShadow)">
+    <path d="M0,0 C-15,-8 -25,-4 -30,6 C-20,4 -10,12 0,22 C10,12 20,4 30,6 C25,-4 15,-8 0,0 Z" fill="url(#goldGrad1)" />
+    <circle cx="0" cy="-6" r="4" fill="url(#goldGrad1)" />
+    <circle cx="-16" cy="1" r="2" fill="url(#goldGrad1)" />
+    <circle cx="16" cy="1" r="2" fill="url(#goldGrad1)" />
+  </g>
+
+  <!-- Bottom Motif -->
+  <g transform="translate(250, 466) scale(1, -1)" filter="url(#royalShadow)">
+    <path d="M0,0 C-15,-8 -25,-4 -30,6 C-20,4 -10,12 0,22 C10,12 20,4 30,6 C25,-4 15,-8 0,0 Z" fill="url(#goldGrad1)" />
+    <circle cx="0" cy="-6" r="4" fill="url(#goldGrad1)" />
+    <circle cx="-16" cy="1" r="2" fill="url(#goldGrad1)" />
+    <circle cx="16" cy="1" r="2" fill="url(#goldGrad1)" />
+  </g>
+
+  <!-- Left Motif -->
+  <g transform="translate(34, 250) rotate(-90)" filter="url(#royalShadow)">
+    <path d="M0,0 C-15,-8 -25,-4 -30,6 C-20,4 -10,12 0,22 C10,12 20,4 30,6 C25,-4 15,-8 0,0 Z" fill="url(#goldGrad1)" />
+    <circle cx="0" cy="-6" r="4" fill="url(#goldGrad1)" />
+  </g>
+
+  <!-- Right Motif -->
+  <g transform="translate(466, 250) rotate(90)" filter="url(#royalShadow)">
+    <path d="M0,0 C-15,-8 -25,-4 -30,6 C-20,4 -10,12 0,22 C10,12 20,4 30,6 C25,-4 15,-8 0,0 Z" fill="url(#goldGrad1)" />
+    <circle cx="0" cy="-6" r="4" fill="url(#goldGrad1)" />
+  </g>
+
+  <!-- Inner Ornate Crest Ring -->
+  <circle cx="250" cy="250" r="185" fill="none" stroke="url(#goldGrad2)" stroke-width="1.2" opacity="0.5" />
+
+  <!-- The Interlocking 'S' and 'K' with Heart -->
+  <g id="monogramLetters" filter="url(#royalShadow)">
+    <!-- Elegant Calligraphic 'S' (Left) -->
+    <path d="M210,135 
+             C165,135 125,160 125,200 
+             C125,245 180,260 215,278 
+             C255,298 265,322 265,348 
+             C265,385 228,405 185,405 
+             C150,405 120,388 108,368 
+             C106,365 110,360 115,362 
+             C132,376 155,388 185,388 
+             C218,388 245,372 245,346 
+             C245,315 200,296 160,274 
+             C125,255 105,230 105,198 
+             C105,150 152,120 208,120 
+             C232,120 252,128 265,138 
+             C268,141 264,146 260,143 
+             C248,135 230,135 210,135 Z" 
+          fill="url(#goldGrad1)" stroke="url(#goldGrad2)" stroke-width="1" />
+
+    <!-- Ornate Tail of S -->
+    <path d="M108,368 C92,348 90,320 102,298 C104,295 108,297 107,300 C98,318 100,340 112,358 Z" fill="url(#goldGrad1)" opacity="0.8"/>
+
+    <!-- Elegant Calligraphic 'K' (Right) -->
+    <!-- Vertical Spine of K -->
+    <path d="M285,125 
+             C290,125 295,130 295,145 
+             L295,355 
+             C295,370 290,375 285,375 
+             C280,375 275,370 275,355 
+             L275,145 
+             C275,130 280,125 285,125 Z" 
+          fill="url(#goldGrad1)" stroke="url(#goldGrad2)" stroke-width="0.8" />
+    
+    <!-- Top Diagonal Stroke of K -->
+    <path d="M285,255 
+             C305,235 345,185 385,145 
+             C395,135 410,130 422,130 
+             C428,130 430,136 424,140 
+             C390,165 330,230 295,270 
+             Z" 
+          fill="url(#goldGrad1)" stroke="url(#goldGrad2)" stroke-width="1" />
+
+    <!-- Bottom Diagonal Stroke of K -->
+    <path d="M305,255 
+             L385,365 
+             C398,382 415,385 430,385 
+             C435,385 436,378 430,375 
+             C400,360 365,315 320,265 
+             Z" 
+          fill="url(#goldGrad1)" stroke="url(#goldGrad2)" stroke-width="1" />
+
+    <!-- Decorative Flourish Terminal on K -->
+    <path d="M422,130 C435,125 445,132 445,142 C445,152 435,158 425,152 C415,146 415,134 422,130 Z" fill="url(#goldGrad1)" />
+    <path d="M430,385 C442,388 450,380 448,370 C445,360 432,360 425,368 C420,374 422,383 430,385 Z" fill="url(#goldGrad1)" />
+
+    <!-- Central Integrated Heart Connecting S & K -->
+    <g transform="translate(250, 248) scale(0.95)" filter="url(#goldShine)">
+      <path d="M0,22 
+               C-2,-2 -26,-22 -36,-38 
+               C-48,-58 -36,-80 -12,-80 
+               C2,-80 10,-68 12,-58 
+               C14,-68 22,-80 36,-80 
+               C60,-80 72,-58 60,-38 
+               C50,-22 26,-2 24,0 
+               L0,22 Z" 
+            fill="url(#goldGrad1)" stroke="url(#goldGrad2)" stroke-width="2.5" />
+      <!-- Inner Heart Glow -->
+      <path d="M0,15 
+               C-2,-4 -20,-18 -28,-32 
+               C-38,-48 -28,-65 -9,-65 
+               C2,-65 8,-55 10,-48 
+               C12,-55 18,-65 29,-65 
+               C48,-65 58,-48 48,-32 
+               C40,-18 22,-4 20,-2 
+               L0,15 Z" 
+            fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.6" />
+      <!-- Sparkle in the Heart -->
+      <polygon points="10,-42 13,-48 19,-50 13,-52 10,-58 7,-52 1,-50 7,-48" fill="#FFFBE6" />
+    </g>
+  </g>
+
+  <!-- Crown / Tiara crest over Monogram -->
+  <g transform="translate(250, 102) scale(0.85)">
+    <path d="M0,-20 L8,-5 L22,-14 L18,5 L-18,5 L-22,-14 L-8,-5 Z" fill="url(#goldGrad1)" />
+    <circle cx="0" cy="-24" r="3" fill="url(#goldGrad1)" />
+    <circle cx="-24" cy="-17" r="2.5" fill="url(#goldGrad1)" />
+    <circle cx="24" cy="-17" r="2.5" fill="url(#goldGrad1)" />
+    <circle cx="0" cy="0" r="2" fill="#FFFFFF" opacity="0.8" />
+  </g>
+
+  <!-- Small Elegant Ribbon / Text Banner Arc at Bottom -->
+  <text x="250" y="435" text-anchor="middle" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="12" font-weight="600" letter-spacing="4" fill="url(#goldGrad1)">
+    KUNAL &amp; SONAL
+  </text>
+  <text x="250" y="450" text-anchor="middle" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="9" font-weight="500" letter-spacing="3" fill="url(#goldGrad2)">
+    13.11.2026
+  </text>
+</svg>
